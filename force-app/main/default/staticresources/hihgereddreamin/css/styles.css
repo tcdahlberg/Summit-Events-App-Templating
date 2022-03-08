@@ -1,0 +1,76 @@
+html, body {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+#loading .background {
+    width: 160px;
+    height: 160px;
+}
+
+.slds-col img {
+    max-width: 99%;
+}
+
+p, .slds-scope, .slds-scope:not(html), .slds-scope body, .slds-scope label.slds-form-element__label, .slds-scope .slds-input, .slds-scope .slds-select_container .slds-select {
+    font-size: 1.05rem;
+    color: #000;
+}
+
+.breadcrumb__item, .slds-scope .slds-text-title_caps {
+    color: #000;
+}
+
+slds-form-element__icon {
+    margin-bottom: 5px;
+}
+
+input, .slds-scope .slds-input, .slds-scope .slds-select_container .slds-select {
+    background-color: #fff;
+    padding:4px 10px;
+}
+
+.starBackground {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.whiteOpacityBackground {
+    background-color:#fff;
+    opacity: 0.85;
+}
+
+.whiteOpacityBackground * {
+    opacity: 1 !important;
+}
+
+@media all and (max-width: 500px) {
+    .hide-padding {
+        padding: 0 !important
+    }
+
+    .minimize-padding {
+        padding: 0.75rem !important;
+    }
+
+    .whiteOpacityBackground {
+        opacity: 1;
+    }
+
+    p, .slds-scope, .slds-scope:not(html), .slds-scope body, .slds-scope label.slds-form-element__label, .slds-scope .slds-input, .slds-scope .slds-select {
+        font-size: 1.2rem;
+        color: #000;
+    }
+}
+

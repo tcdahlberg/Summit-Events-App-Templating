@@ -1,0 +1,45 @@
+<!--
+ - Created by Thaddaeus Dahlberg, Software Engineer, University of St. Thomas on 1/15/2022.
+ -->
+
+<apex:page id="highereddreamin" sidebar="false" lightningStyleSheets="true" showHeader="false" standardStylesheets="false" cache="false" applyHtmlTag="false">
+    <apex:slds/>
+    <html class="no-js" lang="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            <apex:insert name="metaPageTitle"/>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{!URLFOR($Resource.hihgereddreamin, '/css/styles.css')}"/>
+        <style>
+            #loading .background {
+                background-image: url({!URLFOR($Resource.summit__SummitEventsAssets, '/img/loading-summit_events.gif')}) !important;
+            }
+
+            .starBackground {
+                background-image: url("{!URLFOR($Resource.hihgereddreamin , '/img/stars.jpg')}");
+            }
+        </style>
+        <apex:insert name="scriptsHead"/>
+    </head>
+    <body class="starBackground">
+    <div class="slds-scope">
+        <div class="slds-grid slds-grid_align-center">
+            <div class="slds-col slds-size_1-of-1 slds-p-around_large hide-padding whiteOpacityBackground" style="max-width:1024px;">
+                <div class="slds-p-around_large minimize-padding">
+                    <img src="{!URLFOR($Resource.hihgereddreamin , '/img/HE_DreaminLogo_Virtual.png')}"/>
+                    <!--[if IE]>
+                    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+                    <![endif]-->
+                    <apex:insert name="sectionNav"/>
+                    <apex:insert name="body"/>
+                    <apex:insert name="footer"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{!URLFOR($Resource.summit__SummitEventsAssets, '/js/loading.js')}" type="text/javascript"></script>
+    </body>
+    </html>
+</apex:page>
