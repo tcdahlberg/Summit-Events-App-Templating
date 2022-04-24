@@ -5,7 +5,7 @@ project:
         name: Summit-Events-App-Templating
         api_version: '50.0'
     dependencies:
-        - version_id: 04t4P000002fPoqQAE
+        - github: 'https://github.com/SFDO-Community/Summit-Events-App'
     git:
         default_branch: 'main'
     source_format: sfdx
