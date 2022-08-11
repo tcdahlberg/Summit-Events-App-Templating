@@ -14,7 +14,7 @@
         </title>
         <style>
             #loading .background {
-                background-image: url({!URLFOR($Resource.stthomas2021, '/img/loading-shield.gif')}) !important;
+                background-image: url({!URLFOR($Resource.stthomas2021SEA, '/img/loading-shield.gif')}) !important;
                 width: 160px;
                 height: 160px;
             }
@@ -23,8 +23,8 @@
                 max-width: 99%;
             }
         </style>
-        <link rel="stylesheet" href="{!URLFOR($Resource.stthomas2021, '/css/styles.css')}"/>
-        <script src="{!URLFOR($Resource.stthomas2021, '/js/scripts.js')}" type="text/javascript"></script>
+        <link rel="stylesheet" href="{!URLFOR($Resource.stthomas2021SEA, '/css/styles.css')}"/>
+        <script src="{!URLFOR($Resource.stthomas2021SEA, '/js/scripts.js')}" type="text/javascript"></script>
         <apex:insert name="scriptsHead"/>
     </head>
     <body>
