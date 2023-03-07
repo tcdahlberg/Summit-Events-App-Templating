@@ -3,6 +3,7 @@
 .sfdx
 /src.orig
 /src
+.sf
 
 # Python
 *.pyc
@@ -25,7 +26,6 @@ robot/SummitEventsDX/results/
 # Illuminated Cloud (IntelliJ IDEA)
 IlluminatedCloud
 out
-.idea
 *.iml
 
 # CumulusCI
