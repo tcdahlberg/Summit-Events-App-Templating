@@ -121,4 +121,4 @@ flows:
         9:
           task: create_fake_school_data
         10:
-          task: sea:LoadSampleData
+          task: sea:load_sample_data
