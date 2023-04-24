@@ -28,7 +28,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BKTTT2"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header class="header purple">
+    <header class="header">
         <div class="header__container">
             <link href="https://business.stthomas.edu/_files/css/custom.css" rel="stylesheet" type="text/css"/>
             <nav aria-label="Skip navigation" id="access" class="tab-navigation"><a href="#content" tabindex="1">Skip to primary content</a></nav>
