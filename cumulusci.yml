@@ -12,6 +12,7 @@ project:
 sources:
   sea:
     github: 'https://github.com/SFDO-Community/Summit-Events-App'
+    branch: 'master'
 
 tasks:
   robot:
@@ -29,96 +30,18 @@ tasks:
     options:
       required_org_code_coverage_percent: 75
 
-  add_new_templates_piciklist:
-    description: "Adds new templates created in this project."
-    class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
-    options:
-      picklists: summit__Summit_Events__c.summit__Template__c
-      entries:
-        - fullName: "summitEventsApp"
-          label: "summitEventsApp"
-        - fullName: "highereddreamin"
-          label: "highereddreamin"
-        - fullName: "stthomas2021"
-          label: "stthomas2021"
-
-  deploy_site_config:
-    description: Deploys configuration for Development.
-    class_path: cumulusci.tasks.salesforce.Deploy
-    options:
-      namespace_inject: $project_config.project__package__namespace
-      path: unpackaged/config/site
-      unmanaged: True
-
-  deploy_site_settings:
-    description: Setup the Custom Settings for the Event Site
-    class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
-    options:
-      namespace_inject: $project_config.project__package__namespace
-      apex: >
-        Site mySite = [SELECT Id FROM Site WHERE Name = 'summit_events'];
-        SiteDetail mySiteDetail = [SELECT SecureURL FROM SiteDetail WHERE DurableId = :mySite.Id];
-        String url = mySiteDetail.SecureURL;
-        summit__Summit_Events_Settings__c eventSettings = summit__Summit_Events_Settings__c.getOrgDefaults();
-        eventSettings.summit__Community_Base_URL__c = url;
-        eventSettings.summit__Managed_Package__c = true;
-        upsert eventSettings;
-
-  deploy_guest_permission_set:
-    description: Give System Admins Event Admin Permission Set
-    class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
-    options:
-      namespace_inject: $project_config.project__package__namespace
-      apex: >
-        String siteName = 'Summit_Events';
-        
-        Site site = [
-                SELECT GuestUserId
-                FROM Site
-                WHERE Name = :siteName
-        ];
-        
-        List<PermissionSet> eventPermissionSets;
-        eventPermissionSets = [SELECT Name, Id FROM PermissionSet WHERE Name = 'Summit_Events_Registrant'];
-        
-        List<PermissionSetAssignment> permissionSetList = new List<PermissionSetAssignment>();
-        if (!eventPermissionSets.isEmpty()) {
-                permissionSetList.add(new PermissionSetAssignment(PermissionSetId = eventPermissionSets[0].Id, AssigneeId = site.GuestUserId));
-        }
-        if (!permissionSetList.isEmpty()) {
-            upsert permissionSetList;
-        }
-
-  deploy_guest_sharing_rules:
-    description: Deploys configuration for Development.
-    class_path: cumulusci.tasks.salesforce.Deploy
-    options:
-      namespace_inject: $project_config.project__package__namespace
-      path: unpackaged/config/sharing
-      unmanaged: True
-
-  create_fake_school_data:
-    description: Makes fake account data to mimic schools with Educaiton as industry
-    class_path: cumulusci.tasks.bulkdata.snowfakery.Snowfakery
-    options:
-      recipe: datasets/snowfackery/school_recipe.yml
-
 flows:
   config_dev:
     steps:
-        3:
-          task: add_new_templates_piciklist
-        4:
-          task: sea:deploy_permission_set
-        5:
-          task: deploy_site_config
-        6:
-          task: deploy_site_settings
-        7:
-          task: deploy_guest_permission_set
-        8:
-          task: deploy_guest_sharing_rules
-        9:
-          task: create_fake_school_data
-        10:
-          task: sea:load_sample_data
+      3:
+        task: sea:deploy_permission_set
+      4:
+        task: sea:deploy_site_config
+      5:
+        task: sea:deploy_site_settings
+      6:
+        task: sea:deploy_guest_permission_set
+      7:
+        task: sea:deploy_namespaced_guest_sharing_rules
+      9:
+        task: sea:load_sample_data
