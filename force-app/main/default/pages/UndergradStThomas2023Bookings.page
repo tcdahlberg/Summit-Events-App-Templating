@@ -21,6 +21,26 @@
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-5BKTTT2');</script>
         <!-- End Google Tag Manager -->
+        <script>
+            //onload of dom
+            document.addEventListener("DOMContentLoaded", function () {
+                //get links with id that ends with submitOptions
+                const submitOptions = document.querySelectorAll("a[id$='submitOptions'], a[id$='submitReg1'], a[id$='submitReg2']");;
+                const submitButtonValues = document.querySelectorAll("input[id$='submitQuestions']");
+                //Change the value in the link from Register to Submit
+                submitButtonValues.forEach((element) => {
+                    if(element.value !== "Next") {
+                        element.value = "Submit";
+                    }
+                });
+                submitOptions.forEach((element) => {
+                    if(element.innerHTML !== "Next") {
+                        element.innerHTML = "Submit";
+                    }
+                });
+                copyrightYear();
+            });
+        </script>
         <apex:insert name="scriptsHead"/>
     </head>
     <body>

@@ -15,18 +15,28 @@
         <link rel="stylesheet" href="https://s3.amazonaws.com/orion-static-files/css/app.css"/>
         <link rel="stylesheet" href="https://s3.amazonaws.com/static.aws.stthomas.edu/summit-events-styles/orion/style.css"/>
         <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5BKTTT2');</script>
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5BKTTT2');</script>
         <!-- End Google Tag Manager -->
-    <apex:insert name="scriptsHead"/>
+        <apex:insert name="scriptsHead"/>
     </head>
     <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BKTTT2"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BKTTT2"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <div class="header__container">
@@ -46,19 +56,19 @@
                     <ul class="header__action-nav">
                         <li class="header__action-nav__item"><a href="https://www.stthomas.edu/admissions/apply/index.html" class="header__action-nav__link">Apply</a></li>
                         <li class="header__action-nav__item"><a href="https://give.stthomas.edu/" class="header__action-nav__link">Give</a></li>
-                        <li class="header__action-nav__item"><a href="opus-advantage/visit-opus/index.html" class="header__action-nav__link">Visit</a></li>
-                        <li class="header__action-nav__item"><a href="info/prospective-students/index.html" class="header__action-nav__link arrowed">Info For
+                        <li class="header__action-nav__item"><a href="https://business.stthomas.edu/opus-advantage/visit-opus/index.html" class="header__action-nav__link">Visit</a></li>
+                        <li class="header__action-nav__item"><a href="https://business.stthomas.edu/info/prospective-students/index.html" class="header__action-nav__link arrowed">Info For
                                 <svg viewBox="0 0 16 9.1" class="header__arrow-icon">
                                     <polygon points="16,1.1 14.9,0 8,6.9 1.1,0 0,1.1 8,9.1 9.1,8 9.1,8 "></polygon>
                                 </svg>
                             </a>
                             <ul class="header__dropdown small">
-                                <li class="header__drop-nav__item"><a href="info/prospective-students/index.html" class="header__drop-nav__link">Prospective Students</a></li>
-                                <li class="header__drop-nav__item"><a href="info/current-students/index.html" class="header__drop-nav__link">Current Students</a></li>
-                                <li class="header__drop-nav__item"><a href="info/alumni/index.html" class="header__drop-nav__link">Alumni</a></li>
-                                <li class="header__drop-nav__item"><a href="info/donors/index.html" class="header__drop-nav__link">Donors</a></li>
-                                <li class="header__drop-nav__item"><a href="info/recruiters-companies/index.html" class="header__drop-nav__link">Recruiters / Companies</a></li>
-                                <li class="header__drop-nav__item"><a href="info/media/index.html" class="header__drop-nav__link">Media</a></li>
+                                <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/info/prospective-students/index.html" class="header__drop-nav__link">Prospective Students</a></li>
+                                <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/info/current-students/index.html" class="header__drop-nav__link">Current Students</a></li>
+                                <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/info/alumni/index.html" class="header__drop-nav__link">Alumni</a></li>
+                                <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/info/donors/index.html" class="header__drop-nav__link">Donors</a></li>
+                                <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/info/recruiters-companies/index.html" class="header__drop-nav__link">Recruiters / Companies</a></li>
+                                <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/info/media/index.html" class="header__drop-nav__link">Media</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -82,169 +92,169 @@
             </div>
             <div class="header__bottom">
                 <ul class="header__main-nav">
-                    <li class="header__main-nav__item"><a href="opus-advantage/index.html" class="header__main-nav__link">Opus Advantage</a>
+                    <li class="header__main-nav__item"><a href="https://business.stthomas.edu/opus-advantage/index.html" class="header__main-nav__link">Opus Advantage</a>
                         <div class="header__dropdown">
                             <div class="header__dropdown__content">
-                                <div class="header__dropdown__col"><a href="opus-advantage/index.html" class="header__dropdown__title">Opus Advantage</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/opus-advantage/index.html" class="header__dropdown__title">Opus Advantage</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="opus-advantage/principled-leadership/index.html" class="header__drop-nav__link">Principled Leadership</a></li>
-                                        <li class="header__drop-nav__item"><a href="opus-advantage/health-care/index.html" class="header__drop-nav__link">Health Care</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/index.html" class="header__drop-nav__link">Entrepreneurship</a></li>
-                                        <li class="header__drop-nav__item"><a href="opus-advantage/business-digital-world/index.html" class="header__drop-nav__link">Business in a Digital World</a></li>
-                                        <li class="header__drop-nav__item"><a href="opus-advantage/facts-figures/index.html" class="header__drop-nav__link">Facts &amp; Figures</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/opus-advantage/principled-leadership/index.html" class="header__drop-nav__link">Principled Leadership</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/opus-advantage/health-care/index.html" class="header__drop-nav__link">Health Care</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/index.html" class="header__drop-nav__link">Entrepreneurship</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/opus-advantage/business-digital-world/index.html" class="header__drop-nav__link">Business in a Digital World</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/opus-advantage/facts-figures/index.html" class="header__drop-nav__link">Facts &amp; Figures</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="opus-advantage/leadership-dean/index.html" class="header__dropdown__title">Leadership &amp; Dean</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/opus-advantage/leadership-dean/index.html" class="header__dropdown__title">Leadership &amp; Dean</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="opus-advantage/leadership-dean/about-dean/index.html" class="header__drop-nav__link">About the Dean</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/opus-advantage/leadership-dean/about-dean/index.html" class="header__drop-nav__link">About the Dean</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="opus-advantage/visit-opus/index.html" class="header__dropdown__title">Visit Opus</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/opus-advantage/visit-opus/index.html" class="header__dropdown__title">Visit Opus</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="opus-advantage/visit-opus/twin-cities/index.html" class="header__drop-nav__link">The Twin Cities</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/opus-advantage/visit-opus/twin-cities/index.html" class="header__drop-nav__link">The Twin Cities</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="opus-advantage/news/index.html" class="header__dropdown__title">News</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/opus-advantage/news/index.html" class="header__dropdown__title">News</a>
                                     <ul class="header__drop-nav"></ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="opus-advantage/events/index.html" class="header__dropdown__title">Events</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/opus-advantage/events/index.html" class="header__dropdown__title">Events</a>
                                     <ul class="header__drop-nav"></ul>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="header__main-nav__item"><a href="degrees-programs/index.html" class="header__main-nav__link">Degrees &amp; Programs</a>
+                    <li class="header__main-nav__item"><a href="https://business.stthomas.edu/degrees-programs/index.html" class="header__main-nav__link">Degrees &amp; Programs</a>
                         <div class="header__dropdown">
                             <div class="header__dropdown__content">
-                                <div class="header__dropdown__col"><a href="degrees-programs/mba/index.html" class="header__dropdown__title">MBA Programs</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/degrees-programs/mba/index.html" class="header__dropdown__title">MBA Programs</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/mba/part-time/index.html" class="header__drop-nav__link">Part-time Flex MBA</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/mba/health-care/index.html" class="header__drop-nav__link">Health Care MBA</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/mba/executive/index.html" class="header__drop-nav__link">Executive MBA</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/mba/part-time/index.html" class="header__drop-nav__link">Part-time Flex MBA</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/mba/health-care/index.html" class="header__drop-nav__link">Health Care MBA</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/mba/executive/index.html" class="header__drop-nav__link">Executive MBA</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="degrees-programs/specialized-masters/index.html" class="header__dropdown__title">Specialized Masters</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/degrees-programs/specialized-masters/index.html" class="header__dropdown__title">Specialized Masters</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/specialized-masters/ms-business-analytics/index.html" class="header__drop-nav__link">Business Analytics</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/specialized-masters/ms-health-care-innovation/index.html" class="header__drop-nav__link">Health Care Innovation</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/specialized-masters/ms-management/index.html" class="header__drop-nav__link">Management</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/specialized-masters/msl-organizational-ethics-and-compliance/index.html" class="header__drop-nav__link">Organizational Ethics &amp; Compliance</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/specialized-masters/ms-business-analytics/index.html" class="header__drop-nav__link">Business Analytics</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/specialized-masters/ms-health-care-innovation/index.html" class="header__drop-nav__link">Health Care Innovation</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/specialized-masters/ms-management/index.html" class="header__drop-nav__link">Management</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/specialized-masters/msl-organizational-ethics-and-compliance/index.html" class="header__drop-nav__link">Organizational Ethics &amp; Compliance</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="degrees-programs/graduate-certificate-program/index.html" class="header__dropdown__title">Graduate Certificates</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/index.html" class="header__dropdown__title">Graduate Certificates</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/advanced-professional/index.html" class="header__drop-nav__link">Advanced Professional</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/business-analytics/index.html" class="header__drop-nav__link">Business Analytics</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/digital-exp-certificates/index.html" class="header__drop-nav__link">Digital Experience</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/transformational-change-and-organization-development/index.html" class="header__drop-nav__link">Transformational Change &amp; Organization Development</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/global-business-certificates/index.html" class="header__drop-nav__link">Global Business</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/innovation-technology-analytics/index.html" class="header__drop-nav__link">Innovation, Technology and Analytics</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/integrated-marketing-comm-certificate/index.html" class="header__drop-nav__link">Integrated Marketing Communication</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/omnichannel-strategy-certificate/index.html" class="header__drop-nav__link">Omnichannel Strategy</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/strategic-growth-certificate/index.html" class="header__drop-nav__link">Strategic Growth</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/graduate-certificate-program/strategic-risk-certificate/index.html" class="header__drop-nav__link">Strategic Risk &amp; Responsibility</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/advanced-professional/index.html" class="header__drop-nav__link">Advanced Professional</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/business-analytics/index.html" class="header__drop-nav__link">Business Analytics</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/digital-exp-certificates/index.html" class="header__drop-nav__link">Digital Experience</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/transformational-change-and-organization-development/index.html" class="header__drop-nav__link">Transformational Change &amp; Organization Development</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/global-business-certificates/index.html" class="header__drop-nav__link">Global Business</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/innovation-technology-analytics/index.html" class="header__drop-nav__link">Innovation, Technology and Analytics</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/integrated-marketing-comm-certificate/index.html" class="header__drop-nav__link">Integrated Marketing Communication</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/omnichannel-strategy-certificate/index.html" class="header__drop-nav__link">Omnichannel Strategy</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/strategic-growth-certificate/index.html" class="header__drop-nav__link">Strategic Growth</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/strategic-risk-certificate/index.html" class="header__drop-nav__link">Strategic Risk &amp; Responsibility</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="degrees-programs/undergraduate/index.html" class="header__dropdown__title">Undergraduate Program</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/degrees-programs/undergraduate/index.html" class="header__dropdown__title">Undergraduate Program</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/undergraduate/majors/index.html" class="header__drop-nav__link">Majors &amp; Concentrations</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/undergraduate/academic-career-services/index.html" class="header__drop-nav__link">Academic &amp; Career Services</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/undergraduate/scholarships/index.html" class="header__drop-nav__link">Scholarships</a></li>
-                                        <li class="header__drop-nav__item"><a href="degrees-programs/undergraduate/student-experience/index.html" class="header__drop-nav__link">Student Experience</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/undergraduate/majors/index.html" class="header__drop-nav__link">Majors &amp; Concentrations</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/undergraduate/academic-career-services/index.html" class="header__drop-nav__link">Academic &amp; Career Services</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/undergraduate/scholarships/index.html" class="header__drop-nav__link">Scholarships</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/degrees-programs/undergraduate/student-experience/index.html" class="header__drop-nav__link">Student Experience</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="executive-education/index.html" class="header__dropdown__title">Executive Education</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/executive-education/index.html" class="header__dropdown__title">Executive Education</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="executive-education/program-finder/index.html" class="header__drop-nav__link">Program Finder</a></li>
-                                        <li class="header__drop-nav__item"><a href="executive-education/individuals/index.html" class="header__drop-nav__link">For Individuals</a></li>
-                                        <li class="header__drop-nav__item"><a href="executive-education/organization/index.html" class="header__drop-nav__link">For Organizations</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/executive-education/program-finder/index.html" class="header__drop-nav__link">Program Finder</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/executive-education/individuals/index.html" class="header__drop-nav__link">For Individuals</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/executive-education/organization/index.html" class="header__drop-nav__link">For Organizations</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="header__main-nav__item"><a href="schulze-school/index.html" class="header__main-nav__link">Schulze School of Entrepreneurship</a>
+                    <li class="header__main-nav__item"><a href="https://business.stthomas.edu/schulze-school/index.html" class="header__main-nav__link">Schulze School of Entrepreneurship</a>
                         <div class="header__dropdown">
                             <div class="header__dropdown__content">
-                                <div class="header__dropdown__col"><a href="schulze-school/academic-programs/index.html" class="header__dropdown__title">Academic Programs</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/schulze-school/academic-programs/index.html" class="header__dropdown__title">Academic Programs</a>
                                     <ul class="header__drop-nav">
                                         <li class="header__drop-nav__item"><a href="https://www.stthomas.edu/academics/undergraduate/entrepreneurship-major/index.html" class="header__drop-nav__link">Undergraduate Entrepreneurship Program</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/academic-programs/schulze-scholarship/index.html" class="header__drop-nav__link">Schulze Innovation Scholarship Program</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/academic-programs/graduate-courses/index.html" class="header__drop-nav__link">Graduate Courses</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/academic-programs/schulze-scholarship/index.html" class="header__drop-nav__link">Schulze Innovation Scholarship Program</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/academic-programs/graduate-courses/index.html" class="header__drop-nav__link">Graduate Courses</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="schulze-school/student-engagement/index.html" class="header__dropdown__title">Student Engagement</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/schulze-school/student-engagement/index.html" class="header__dropdown__title">Student Engagement</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="schulze-school/student-engagement/competitions/index.html" class="header__drop-nav__link">Competitions</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/student-engagement/freshman-innovation-immersion/index.html" class="header__drop-nav__link">Freshman Innovation Immersion</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/student-engagement/high-school-opportunities/index.html" class="header__drop-nav__link">High School Opportunities</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/student-engagement/student-organizations/index.html" class="header__drop-nav__link">Student Organizations</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/student-engagement/competitions/index.html" class="header__drop-nav__link">Competitions</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/student-engagement/freshman-innovation-immersion/index.html" class="header__drop-nav__link">Freshman Innovation Immersion</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/student-engagement/high-school-opportunities/index.html" class="header__drop-nav__link">High School Opportunities</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/student-engagement/student-organizations/index.html" class="header__drop-nav__link">Student Organizations</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="schulze-school/career-development/index.html" class="header__dropdown__title">Career Development</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/schulze-school/career-development/index.html" class="header__dropdown__title">Career Development</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="schulze-school/career-development/alumni-resources/index.html" class="header__drop-nav__link">Alumni Resources</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/career-development/hire-tommiepreneur/index.html" class="header__drop-nav__link">Hire a Tommiepreneur</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/career-development/alumni-resources/index.html" class="header__drop-nav__link">Alumni Resources</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/career-development/hire-tommiepreneur/index.html" class="header__drop-nav__link">Hire a Tommiepreneur</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="schulze-school/launch-your-business/index.html" class="header__dropdown__title">Launch Your Business</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/schulze-school/launch-your-business/index.html" class="header__dropdown__title">Launch Your Business</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="schulze-school/launch-your-business/accelerator-program/index.html" class="header__drop-nav__link">Accelerator Program</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/launch-your-business/pre-seed-program/index.html" class="header__drop-nav__link">Pre-SEED Grant Program</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/launch-your-business/community-entrepreneurship/index.html" class="header__drop-nav__link">Community Entrepreneurship Program</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/launch-your-business/accelerator-program/index.html" class="header__drop-nav__link">Accelerator Program</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/launch-your-business/pre-seed-program/index.html" class="header__drop-nav__link">Pre-SEED Grant Program</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/launch-your-business/community-entrepreneurship/index.html" class="header__drop-nav__link">Community Entrepreneurship Program</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="schulze-school/about/index.html" class="header__dropdown__title">About the Schulze School</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/schulze-school/about/index.html" class="header__dropdown__title">About the Schulze School</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="schulze-school/about/benefactor/index.html" class="header__drop-nav__link">Our Benefactor</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/about/faculty/index.html" class="header__drop-nav__link">Faculty</a></li>
-                                        <li class="header__drop-nav__item"><a href="schulze-school/about/contact-us/index.html" class="header__drop-nav__link">Staff and Contact Info</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/about/benefactor/index.html" class="header__drop-nav__link">Our Benefactor</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/about/faculty/index.html" class="header__drop-nav__link">Faculty</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/schulze-school/about/contact-us/index.html" class="header__drop-nav__link">Staff and Contact Info</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="header__main-nav__item"><a href="faculty-research/index.html" class="header__main-nav__link">Faculty &amp; Research</a>
+                    <li class="header__main-nav__item"><a href="https://business.stthomas.edu/faculty-research/index.html" class="header__main-nav__link">Faculty &amp; Research</a>
                         <div class="header__dropdown">
                             <div class="header__dropdown__content">
-                                <div class="header__dropdown__col"><a href="faculty-research/faculty/index.html" class="header__dropdown__title">OUR FACULTY</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/faculty-research/faculty/index.html" class="header__dropdown__title">OUR FACULTY</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="faculty-research/faculty-bios/index.html" class="header__drop-nav__link">A – Z Directory</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/faculty-bios/index.html" class="header__drop-nav__link">A – Z Directory</a></li>
                                         <li class="header__drop-nav__item"><a href="https://ir.stthomas.edu/ocb/" class="header__drop-nav__link">Articles &amp; Publications</a></li>
-                                        <li class="header__drop-nav__item"><a href="faculty-research/faculty-awards/index.html" class="header__drop-nav__link">Faculty Awards</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/faculty-awards/index.html" class="header__drop-nav__link">Faculty Awards</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="faculty-research/departments/index.html" class="header__dropdown__title">Academic Departments</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/faculty-research/departments/index.html" class="header__dropdown__title">Academic Departments</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="faculty-research/departments/accounting/index.html" class="header__drop-nav__link">Accounting</a></li>
-                                        <li class="header__drop-nav__item"><a href="faculty-research/departments/entrepreneurship/index.html" class="header__drop-nav__link">Entrepreneurship</a></li>
-                                        <li class="header__drop-nav__item"><a href="faculty-research/departments/ethics-business-law/index.html" class="header__drop-nav__link">Ethics &amp; Business Law</a></li>
-                                        <li class="header__drop-nav__item"><a href="faculty-research/departments/finance/index.html" class="header__drop-nav__link">Finance</a></li>
-                                        <li class="header__drop-nav__item"><a href="faculty-research/departments/management/index.html" class="header__drop-nav__link">Management</a></li>
-                                        <li class="header__drop-nav__item"><a href="faculty-research/departments/marketing/index.html" class="header__drop-nav__link">Marketing </a></li>
-                                        <li class="header__drop-nav__item"><a href="faculty-research/departments/operations-supply-management1/index.html" class="header__drop-nav__link">Operations &amp; Supply Chain Management</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/departments/accounting/index.html" class="header__drop-nav__link">Accounting</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/departments/entrepreneurship/index.html" class="header__drop-nav__link">Entrepreneurship</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/departments/ethics-business-law/index.html" class="header__drop-nav__link">Ethics &amp; Business Law</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/departments/finance/index.html" class="header__drop-nav__link">Finance</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/departments/management/index.html" class="header__drop-nav__link">Management</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/departments/marketing/index.html" class="header__drop-nav__link">Marketing </a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/departments/operations-supply-management1/index.html" class="header__drop-nav__link">Operations &amp; Supply Chain Management</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__dropdown__col"><a href="faculty-research/research-project-facilities/index.html" class="header__dropdown__title">Research Projects &amp; Facilities</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/faculty-research/research-project-facilities/index.html" class="header__dropdown__title">Research Projects &amp; Facilities</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="faculty-research/research-project-facilities/behavioral-center/index.html" class="header__drop-nav__link">Behavioral Research Center</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/faculty-research/research-project-facilities/behavioral-center/index.html" class="header__drop-nav__link">Behavioral Research Center</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="header__main-nav__item"><a href="centers-institutes/index.html" class="header__main-nav__link">Centers &amp; Institutes</a>
+                    <li class="header__main-nav__item"><a href="https://business.stthomas.edu/centers-institutes/index.html" class="header__main-nav__link">Centers &amp; Institutes</a>
                         <div class="header__dropdown">
                             <div class="header__dropdown__content">
-                                <div class="header__dropdown__col"><a href="centers-institutes/index.html" class="header__dropdown__title">Centers &amp; Institutes</a>
+                                <div class="header__dropdown__col"><a href="https://business.stthomas.edu/centers-institutes/index.html" class="header__dropdown__title">Centers &amp; Institutes</a>
                                     <ul class="header__drop-nav">
-                                        <li class="header__drop-nav__item"><a href="centers-institutes/family-business-center/index.html" class="header__drop-nav__link">Family Business Center</a></li>
-                                        <li class="header__drop-nav__item"><a href="centers-institutes/principled-leadership/index.html" class="header__drop-nav__link">Melrose &amp; The Toro Company Center for Principled Leadership</a></li>
-                                        <li class="header__drop-nav__item"><a href="centers-institutes/norris-institute/index.html" class="header__drop-nav__link">Norris Institute</a></li>
-                                        <li class="header__drop-nav__item"><a href="centers-institutes/schulze-innovation-fund/index.html" class="header__drop-nav__link">Schulze Innovation Fund</a></li>
-                                        <li class="header__drop-nav__item"><a href="centers-institutes/small-business-development/index.html" class="header__drop-nav__link">Small Business Development Center</a></li>
-                                        <li class="header__drop-nav__item"><a href="centers-institutes/small-business-institute/index.html" class="header__drop-nav__link">Small Business Institute</a></li>
-                                        <li class="header__drop-nav__item"><a href="centers-institutes/risk-leadership-initiative/index.html" class="header__drop-nav__link">Risk Leadership Initiative</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/centers-institutes/family-business-center/index.html" class="header__drop-nav__link">Family Business Center</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/centers-institutes/principled-leadership/index.html" class="header__drop-nav__link">Melrose &amp; The Toro Company Center for Principled Leadership</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/centers-institutes/norris-institute/index.html" class="header__drop-nav__link">Norris Institute</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/centers-institutes/schulze-innovation-fund/index.html" class="header__drop-nav__link">Schulze Innovation Fund</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/centers-institutes/small-business-development/index.html" class="header__drop-nav__link">Small Business Development Center</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/centers-institutes/small-business-institute/index.html" class="header__drop-nav__link">Small Business Institute</a></li>
+                                        <li class="header__drop-nav__item"><a href="https://business.stthomas.edu/centers-institutes/risk-leadership-initiative/index.html" class="header__drop-nav__link">Risk Leadership Initiative</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -258,7 +268,7 @@
                 </button>
             </div>
             <ul class="header__breadcrumbs">
-                <li class="header__breadcrumbs__item"><a href="index.html" class="header__breadcrumbs__link">Home</a></li>
+                <li class="header__breadcrumbs__item"><a href="https://business.stthomas.edu/index.html" class="header__breadcrumbs__link">Home</a></li>
             </ul>
         </div>
     </header>
@@ -296,7 +306,7 @@
             <div class="footer__logo__wrap">
                 <div class="footer__logo__opus">Opus College of Business
                     <address>1000 LaSalle Avenue<br/>Minneapolis, MN 55403 USA</address>
-                    <a href="https://www.stthomas.edu/about/land-acknowledgment/" class="footer__item">Land Acknowledgment</a></div>
+                </div>
                 <div class="footer__logo__svg">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 342 32" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
@@ -340,45 +350,46 @@
                 </div>
             </div>
             <div class="footer__nav-group ">
-                <div class="footer__nav-top-level"><a href="degrees-programs/index.html" class="footer__nav__title">Degrees &amp; Programs</a> <span class="footer__nav__rule"></span></div>
+                <div class="footer__nav-top-level"><a href="https://business.stthomas.edu/degrees-programs/index.html" class="footer__nav__title">Degrees &amp; Programs</a> <span class="footer__nav__rule"></span></div>
                 <ul class="footer__nav">
-                    <li class="footer__nav__item"><a href="executive-education/index.html" class="footer__nav__link">Executive Education</a></li>
-                    <li class="footer__nav__item"><a href="degrees-programs/graduate-certificate-program/index.html" class="footer__nav__link">Graduate Certificates</a></li>
-                    <li class="footer__nav__item"><a href="degrees-programs/mba/index.html" class="footer__nav__link">MBA Programs</a></li>
-                    <li class="footer__nav__item"><a href="degrees-programs/specialized-masters/index.html" class="footer__nav__link">Specialized Masters</a></li>
-                    <li class="footer__nav__item"><a href="degrees-programs/undergraduate/index.html" class="footer__nav__link">Undergraduate BA/BS</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/executive-education/index.html" class="footer__nav__link">Executive Education</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/degrees-programs/graduate-certificate-program/index.html" class="footer__nav__link">Graduate Certificates</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/degrees-programs/mba/index.html" class="footer__nav__link">MBA Programs</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/degrees-programs/specialized-masters/index.html" class="footer__nav__link">Specialized Masters</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/degrees-programs/undergraduate/index.html" class="footer__nav__link">Undergraduate BA/BS</a></li>
                 </ul>
             </div>
             <div class="footer__nav-group footer__nav-group__info">
                 <div class="footer__nav-top-level"><a class="footer__nav__title">Info For</a> <span class="footer__nav__rule"></span></div>
                 <ul class="footer__nav">
-                    <li class="footer__nav__item"><a href="info/alumni/index.html" class="footer__nav__link">Alumni</a></li>
-                    <li class="footer__nav__item"><a href="info/current-students/index.html" class="footer__nav__link">Current Students</a></li>
-                    <li class="footer__nav__item"><a href="info/donors/index.html" class="footer__nav__link">Donors</a></li>
-                    <li class="footer__nav__item"><a href="info/media/index.html" class="footer__nav__link">Media</a></li>
-                    <li class="footer__nav__item"><a href="info/prospective-students/index.html" class="footer__nav__link">Prospective Students</a></li>
-                    <li class="footer__nav__item"><a href="info/recruiters-companies/index.html" class="footer__nav__link">Recruiters &amp; Companies</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/info/alumni/index.html" class="footer__nav__link">Alumni</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/info/current-students/index.html" class="footer__nav__link">Current Students</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/info/donors/index.html" class="footer__nav__link">Donors</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/info/media/index.html" class="footer__nav__link">Media</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/info/prospective-students/index.html" class="footer__nav__link">Prospective Students</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/info/recruiters-companies/index.html" class="footer__nav__link">Recruiters &amp; Companies</a></li>
                 </ul>
             </div>
             <div class="footer__nav-group ">
                 <div class="footer__nav-top-level"><a class="footer__nav__title">Visit</a> <span class="footer__nav__rule"></span></div>
                 <ul class="footer__nav">
                     <li class="footer__nav__item"><a href="https://campusmap.stthomas.edu/" class="footer__nav__link">Campus Map &amp; Directions</a></li>
-                    <li class="footer__nav__item"><a href="contact-us/index.html" class="footer__nav__link">Contact Us</a></li>
-                    <li class="footer__nav__item"><a href="opus-advantage/visit-opus/index.html" class="footer__nav__link">Location</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/contact-us/index.html" class="footer__nav__link">Contact Us</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/opus-advantage/visit-opus/index.html" class="footer__nav__link">Location</a></li>
                 </ul>
             </div>
             <div class="footer__nav-group ">
                 <div class="footer__nav-top-level"><a class="footer__nav__title">News &amp; Events</a> <span class="footer__nav__rule"></span></div>
                 <ul class="footer__nav">
-                    <li class="footer__nav__item"><a href="opus-advantage/events/index.html" class="footer__nav__link">Events</a></li>
-                    <li class="footer__nav__item"><a href="opus-advantage/news/index.html" class="footer__nav__link">News</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/opus-advantage/events/index.html" class="footer__nav__link">Events</a></li>
+                    <li class="footer__nav__item"><a href="https://business.stthomas.edu/opus-advantage/news/index.html" class="footer__nav__link">News</a></li>
                 </ul>
             </div>
             <ul class="footer__externals">
                 <li class="footer__externals__item"><a href="https://www.stthomas.edu/" class="footer__externals__link">University of St. Thomas</a></li>
                 <li class="footer__externals__item"><a href="https://one.stthomas.edu" class="footer__externals__link">OneStThomas</a></li>
-                <li class="footer__externals__item"><a href="https://www.stthomas.edu/officeofgc/universitypolicies/universitypolicyrepository/?utm_source=ustredirect&amp;utm_medium=Policies" class="footer__externals__link">Privacy Policy</a></li>
+                <li class="footer__externals__item"><a id="report-problem" href="https://stthomas.az1.qualtrics.com/jfe/form/SV_5Ab5cqQpmwfxRpr" target="_blank" class="footer__externals__link">Report a Website Problem</a></li>
+                <li class="footer__externals__item"><a href="https://www.stthomas.edu/policies/online-privacy/?utm_source=ustredirect&amp;utm_medium=Policies" class="footer__externals__link">Privacy Policy</a></li>
                 <li class="footer__externals__item"><a href="https://www.stthomas.edu/emergency/" class="footer__externals__link">Emergency</a></li>
                 <li class="footer__externals__item"><a href="https://www.stthomas.edu/accessibility-statement/" rel="noopener" target="_blank" class="footer__externals__link">Accessibility</a></li>
             </ul>
