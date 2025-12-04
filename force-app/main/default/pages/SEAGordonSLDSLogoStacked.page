@@ -1,11 +1,8 @@
 <!--
-Copyright 2019 University of St. Thomas - Minnesota. All rights reserved.
-Use of this source code is governed by a BSD Revised
-license that can be found in the LICENSE file.
-Created by Thaddaeus Dahlberg on 2/15/2020.
--->
+ - Created by Thad-PC-2019 on 11/26/2025.
+ -->
 
-<apex:page id="GeneralSLDS" sidebar="false" lightningStyleSheets="true" showHeader="false" standardStylesheets="false" cache="false" applyHtmlTag="false" docType="html-5">
+<apex:page id="SEAGordonSLDSLogoStacked" sidebar="false" lightningStyleSheets="true" showHeader="false" standardStylesheets="false" cache="false" applyHtmlTag="false">
     <apex:slds/>
     <html class="no-js" lang="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <head>
@@ -16,25 +13,20 @@ Created by Thaddaeus Dahlberg on 2/15/2020.
         </title>
         <style>
             #loading .background {
-                background-image: url({!URLFOR($Resource.SEAGordonTemplateAssets, '/loading-summit_events.gif')}) !important;
-                width: 160px;
-                height: 160px;
+                background-image: url({!URLFOR($Resource.SEAGordonTemplateAssets, '/gc-stackedmid-blue-yellow.png')}) !important;
+                width: 200px;
+                height: 204px;
             }
-
             .slds-col img {
                 max-width: 99%;
             }
         </style>
-
         <apex:insert name="scriptsHead"/>
     </head>
     <body>
     <div class="slds-scope">
         <div class="slds-grid slds-grid_align-center">
             <div class="slds-col slds-size_1-of-1" style="max-width:1024px;">
-                <!--[if IE]>
-                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-                <![endif]-->
                 <apex:insert name="body"/>
             </div>
         </div>
