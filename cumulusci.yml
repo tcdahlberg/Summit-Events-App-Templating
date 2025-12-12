@@ -56,6 +56,8 @@ tasks:
           label: "Undergrad St Thomas 2023"
         - fullName: "UndergradStThomas2023Bookings"
           label: "Undergrad St Thomas 2023 Bookings"
+        - fullName: "StThomasSEA2025"
+          label: "St Thomas SEA 2025"
 
   deploy_guest_permission_set:
     description: Give System Admins Event Admin Permission Set
@@ -94,21 +96,31 @@ tasks:
 flows:
   config_dev:
     steps:
+      1.2:
+        task: sea:deploy_pre
+      1.3:
+        task: sea:role_to_userUser
       3:
-        task: sea:deploy_permission_set
+        task: sea:create_community
       4:
-        task: sea:deploy_site_config
+        task: sea:create_community_network
       5:
-        task: sea:deploy_site_settings
+        task: sea:create_community_experience_cloud_bundle
       6:
-        task: sea:deploy_guest_permission_set
+        task: sea:deploy_site_config
       7:
-        task: sea:deploy_namespaced_guest_sharing_rules
+        task: sea:create_community_publish
       9:
-        task: sea:load_sample_data
+        task: sea:deploy_admin_permission_set
       10:
-        task: deploy_guest_permission_set
+        task: sea:deploy_site_settings
       11:
-        task: add_template_picklist_items
+        task: sea:deploy_guest_permission_set
       12:
+        task: deploy_guest_permission_set
+      13:
+        task: add_template_picklist_items
+      14:
         task: check_namespace_box
+      15:
+        task: sea:load_sample_data

@@ -1,0 +1,41 @@
+.block_full-width-block:before {
+    content: ""
+}
+.block_full-width-block:after {
+    display: none;
+    content: ""
+}
+.block_full-width-block:before {
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 300px;
+    z-index: 1;
+    background: repeating-linear-gradient(180deg,#510c76,#510c76 33.3333%,#8348ad 0,#8348ad 66.6666%,#a97cca 0,#a97cca)
+}
+.block_full-width-block:after {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    width: 20px;
+    height: 100%;
+    background: repeating-linear-gradient(-55deg,#a7a9ac,#a7a9ac 1px,#fff 0,#fff 10px)
+}
+
+.block_full-width-block {
+    position: relative;
+    padding: 25px;
+    background-color: #fff;
+}
+@media print, screen and (min-width: 64em) {
+    .block_full-width-block {
+        padding: 40px 55px 24px 75px;
+        margin: 20px 0;
+        overflow: hidden;
+    }
+}
+

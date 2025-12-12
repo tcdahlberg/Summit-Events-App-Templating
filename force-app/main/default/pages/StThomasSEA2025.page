@@ -1,0 +1,902 @@
+<!--
+ - Created by Thad-PC-2019 on 12/3/2025.
+ -->
+
+<apex:page id="StThomasSEA2025" sidebar="false" lightningStyleSheets="true" showHeader="false" standardStylesheets="false" cache="false" applyHtmlTag="false">
+    <apex:slds/>
+    <html lang="en" xml:lang="en" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <meta content="noindex, nofollow" name="robots"/>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+        <link href="https://stthomas.edu/_files/images/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+        <link href="https://stthomas.edu/_files/images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+        <link href="https://stthomas.edu/_files/images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+        <link href="https://stthomas.edu/_files/images/favicons/site.webmanifest" rel="manifest"/>
+        <link color="#510c76" href="https://stthomas.edu/_files/images/favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+        <meta content="#da532c" name="msapplication-TileColor"/>
+        <meta content="#ffffff" name="theme-color"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="#8348ad" name="theme-color"/>
+        <meta content="website" property="og:type"/>
+        <meta content="https://www.stthomas.edu/_media-library/_placeholder-images/stthomas-arches-1920x1080.jpg" property="og:image"/>
+        <meta content="University of St. Thomas arches in spring." property="og:image:alt"/>
+
+        <title><apex:insert name="metaPageTitle"/></title>
+
+        <!-- PurgeCSS Minimal CSS - Automatically extracted, only what's actually used -->
+        <link href="{!URLFOR($Resource.StThomasGeneral2025, '/css/minimal.css')}" rel="stylesheet"/>
+        <link href="{!URLFOR($Resource.StThomasGeneral2025, '/css/slds-brand.css')}" rel="stylesheet"/>
+        <script src="https://s3.amazonaws.com/static.aws.stthomas.edu/gtm-consent/main.js" type="module"></script>
+        <style>
+            #loading .background {
+                background-image: url({!URLFOR($Resource.StThomasGeneral2025, '/images/loading-shield.gif')}) !important;
+                width: 160px;
+                height: 160px;
+            }
+
+            .slds-col img {
+                max-width: 99%;
+            }
+        </style>
+        <apex:insert name="scriptsHead"/>
+    </head>
+    <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHFMKX"
+                height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager iFrame - no content"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ6DZKM"
+                height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager iFrame - no content"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="app">
+
+        <header class="Header Gemini">
+            <div class="Header__sentinel" data-stuck=""></div>
+            <div class="Header__main js-header" data-stuck="">
+                <a class="Header__logo" href="https://www.stthomas.edu">
+                    <span class="screen-reader-text">University of St. Thomas</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 128 28">
+                        <path class="st-thomas"
+                              d="M126,16.2 C124.8,14.8 123.1,14 121.3,14.1 C118.5,14.1 116.2,15.2 116.2,17.8 C116.2,22.1 123.3,20.5 123.3,22.5 C123.3,23.1 122.4,23.8 121.1,23.8 C119.8,23.9 118.6,23.4 117.8,22.4 L115.7,24 C117.2,25.5 119.2,26.2 121.2,26.1 C123.8,26.1 126.3,24.9 126.3,22.1 C126.3,17.8 119.1,19.5 119.1,17.5 C119.1,16.8 119.9,16.4 121.2,16.4 C122.4,16.3 123.5,17 124.1,18 L126,16.2 Z M111.8,21.8 C111.8,23.3 110.1,23.9 108.9,23.9 C107.9,23.9 107.1,23.3 107.1,22.5 C107.1,21.4 108,21.1 109,20.9 L110.5,20.6 C111,20.5 111.4,20.4 111.8,20.2 L111.8,21.8 Z M114.5,17.9 C114.5,14.6 112,14.1 109.6,14.1 C107.1,14.1 104.7,15.1 104.7,17.8 L107.5,17.9 C107.5,16.7 108,16.2 109.6,16.2 C110.8,16.2 111.8,16.5 111.8,17.7 L111.8,18 C110.8,18.3 109.8,18.5 108.8,18.7 L107.6,18.9 C105.9,19.2 104.1,20.2 104.1,22.5 C104.1,24.5 105.7,26.1 107.7,26.1 C107.8,26.1 107.9,26.1 108,26.1 C109.4,26.1 110.7,25.6 111.7,24.8 C111.7,25.2 111.8,25.5 112,25.8 L114.9,25.8 C114.6,25.2 114.4,24.5 114.5,23.9 L114.5,17.9 L114.5,17.9 Z M85.7,25.9 L88.5,25.9 L88.5,19.9 C88.5,18.3 89.4,16.8 90.9,16.8 C92.2,16.8 92.8,17.7 92.8,19 L92.8,26 L95.6,26 L95.6,20 C95.6,18.4 96.5,16.9 98.1,16.9 C99.4,16.9 100,17.8 100,19.1 L100,26.1 L102.8,26.1 L102.8,18 C102.8,15.5 101.3,14.3 98.8,14.3 C97.4,14.3 96.1,14.9 95.3,16 C94.6,14.8 93.3,14.1 91.9,14.3 C90.6,14.3 89.4,14.8 88.6,15.7 L88.6,14.6 L85.8,14.6 L85.8,25.9 L85.7,25.9 Z M78.8,16.7 C80.8,16.7 81.8,18.4 81.8,20.2 C81.8,22 80.8,23.7 78.8,23.7 C76.8,23.7 75.8,22 75.8,20.2 C75.8,18.4 76.8,16.7 78.8,16.7 Z M78.8,14.2 C75.1,14.2 72.9,16.8 72.9,20.2 C72.9,23.6 75.1,26.2 78.8,26.2 C82.5,26.2 84.7,23.6 84.7,20.2 C84.7,16.8 82.5,14.2 78.8,14.2 Z M61.1,25.9 L63.9,25.9 L63.9,20 C63.9,18.6 64.5,16.8 66.6,16.8 C68,16.8 68.6,17.5 68.6,19.1 L68.6,25.9 L71.4,25.9 L71.4,18.3 C71.4,15 69.2,14.2 67.2,14.2 C65.9,14.1 64.7,14.6 63.9,15.6 L63.9,15.6 L63.9,9.8 L61.1,9.8 L61.1,25.9 L61.1,25.9 Z M52.6,25.9 L55.6,25.9 L55.6,12.6 L60,12.6 L60,9.8 L48.1,9.8 L48.1,12.6 L52.5,12.6 L52.6,25.9 Z M44.7,25.9 L47.7,25.9 L47.7,22.8 L44.7,22.8 L44.7,25.9 Z M38.2,14.4 L36.5,14.4 L36.5,16.4 L38.2,16.4 L38.2,23.2 C38.2,24.9 39,26 41.2,26 C41.9,26 42.7,25.9 43.4,25.7 L43.4,23.4 C43,23.5 42.6,23.5 42.2,23.5 C41.1,23.5 41,23 41,22.1 L41,16.3 L43.5,16.3 L43.5,14.3 L41,14.3 L41,10.2 L38.2,10.2 L38.2,14.4 Z M22.2,22.9 C23.8,25.1 26.4,26.4 29.2,26.3 C32.6,26.3 36.3,24.9 36.3,21 C36.3,17.9 34,17 31.6,16.4 L29.6,16 C27.8,15.6 26.3,15.3 26.3,13.9 C26.3,12.8 27.6,12.1 29.4,12.1 C31.1,12 32.8,12.9 33.6,14.4 L36.1,12.5 C34.5,10.4 32,9.2 29.4,9.3 C26.4,9.3 23.1,10.9 23.1,14.3 C23.1,17.3 25.4,18.2 27.9,18.8 L29.7,19.2 C31.8,19.7 33,20.1 33,21.3 C33,22.9 31.1,23.4 29.6,23.4 C27.7,23.5 25.8,22.6 24.7,21 L22.2,22.9 Z"/>
+                        <path class="university-of"
+                              d="M77.2,6.2 L78.1,6.2 L78.1,4.2 L80.1,4.2 L80.1,3.4 L78.1,3.4 L78.1,2.2 L80.4,2.2 L80.4,1.4 L77.2,1.4 L77.2,6.2 Z M73.3,1.3 C72,1.3 71,2.4 71,3.7 C71,3.8 71,3.8 71,3.9 C70.9,5.2 71.8,6.3 73.1,6.4 C74.4,6.5 75.5,5.6 75.6,4.3 C75.6,4.2 75.6,4 75.6,3.9 C75.7,2.6 74.7,1.5 73.5,1.4 C73.4,1.3 73.3,1.3 73.3,1.3 Z M73.3,2.1 C74.3,2.1 74.7,2.9 74.7,3.8 C74.7,4.7 74.3,5.5 73.3,5.5 C72.3,5.5 71.9,4.7 71.9,3.8 C71.9,2.9 72.3,2.1 73.3,2.1 Z M65.8,6.2 L66.7,6.2 L66.7,4.3 L68.3,1.4 L67.3,1.4 L66.3,3.4 L65.3,1.4 L64.3,1.4 L65.9,4.3 L65.8,6.2 Z M60.9,6.2 L61.8,6.2 L61.8,2.2 L63.1,2.2 L63.1,1.4 L59.6,1.4 L59.6,2.2 L60.9,2.2 L60.9,6.2 Z M57.2,6.2 L58.1,6.2 L58.1,1.4 L57.2,1.4 L57.2,6.2 Z M51.4,5.3 C51.9,6 52.7,6.3 53.5,6.3 C54.5,6.3 55.6,5.9 55.6,4.7 C55.6,3.8 54.9,3.5 54.2,3.3 L53.6,3.2 C53.1,3.1 52.6,3 52.6,2.6 C52.6,2.3 53,2.1 53.5,2.1 C54,2.1 54.5,2.3 54.8,2.8 L55.5,2.2 C55,1.6 54.3,1.2 53.5,1.2 C52.6,1.2 51.6,1.7 51.6,2.7 C51.6,3.6 52.3,3.9 53,4 L53.5,4.1 C54.1,4.2 54.5,4.4 54.5,4.7 C54.5,5.2 53.9,5.3 53.5,5.3 C52.9,5.3 52.4,5 52,4.6 L51.4,5.3 Z M47.6,2.2 L48.4,2.2 C49,2.2 49.3,2.5 49.3,2.9 C49.3,3.3 49,3.6 48.6,3.6 C48.6,3.6 48.5,3.6 48.5,3.6 L47.5,3.6 L47.5,2.2 L47.6,2.2 Z M46.7,6.2 L47.6,6.2 L47.6,4.4 L48.5,4.4 L49.4,6.2 L50.4,6.2 L49.3,4.3 C49.9,4.1 50.3,3.5 50.3,2.9 C50.3,2.1 49.7,1.4 48.9,1.4 C48.8,1.4 48.8,1.4 48.7,1.4 L46.7,1.4 L46.7,6.2 Z M41.6,6.2 L45.2,6.2 L45.2,5.4 L42.5,5.4 L42.5,4.1 L44.8,4.1 L44.8,3.3 L42.5,3.3 L42.5,2.2 L45,2.2 L45,1.4 L41.6,1.4 L41.6,6.2 Z M37.6,6.2 L38.8,6.2 L40.2,1.4 L39.3,1.4 L38.2,5.2 L38.2,5.2 L37.1,1.4 L36.2,1.4 L37.6,6.2 Z M33.9,6.2 L34.8,6.2 L34.8,1.4 L33.9,1.4 L33.9,6.2 Z M28.3,6.2 L29.1,6.2 L29.1,2.8 L29.1,2.8 L31.1,6.2 L32,6.2 L32,1.4 L31.2,1.4 L31.2,4.8 L31.2,4.8 L29.2,1.4 L28.4,1.4 L28.3,6.2 Z M26.5,1.4 L25.6,1.4 L25.6,4.5 C25.6,5.1 25.4,5.5 24.6,5.5 C23.8,5.5 23.6,5.1 23.6,4.5 L23.6,1.4 L22.7,1.4 L22.7,4.7 C22.7,5.7 23.5,6.3 24.6,6.3 C25.7,6.3 26.5,5.7 26.5,4.7 L26.5,1.4 Z"/>
+                        <path class="shield-part"
+                              d="M18.7,11 C18.5,11 18.4,11.1 18.3,11.2 C17.7,11.7 16.8,11.7 16.2,11.2 C15.7,10.9 15.1,10.9 14.6,11.2 C14,11.7 13.1,11.7 12.5,11.2 C12,10.9 11.4,10.9 10.9,11.2 C10.7,11.3 10.6,11.4 10.4,11.5 L10.4,15 C10.2,15 10.1,15 9.9,15 C9.7,15 9.6,15 9.4,15 L9.4,11.5 C9.2,11.5 9,11.4 8.9,11.2 C8.7,11 8.4,10.9 8.1,10.9 C7.8,10.9 7.5,11 7.3,11.2 C7,11.4 6.6,11.6 6.2,11.6 C5.8,11.6 5.4,11.5 5.1,11.2 C5,11 4.7,10.9 4.4,10.9 C4.1,10.9 3.8,11 3.6,11.2 C3.3,11.4 2.9,11.6 2.5,11.6 C2.1,11.6 1.7,11.5 1.5,11.2 C1.3,11.1 1.2,11 1,11 C0.9,13.1 1.1,15.1 1.7,17.1 L7.1,17.1 C7.1,17.3 7.1,17.4 7.1,17.6 C7.1,17.8 7.1,18 7.2,18.1 L2.1,18.1 C3.5,21.6 6,24.4 9.3,26.2 L9.3,20.2 C9.5,20.2 9.6,20.2 9.8,20.2 C10,20.2 10.1,20.2 10.3,20.2 L10.3,26.2 C13.6,24.5 16.2,21.6 17.5,18.1 L12.4,18.1 C12.4,17.9 12.5,17.8 12.5,17.6 C12.5,17.4 12.5,17.3 12.5,17.1 L18,17.1 C18.6,15.1 18.8,13.1 18.7,11 M6.9,12.7 C7.1,13.1 7.5,13.4 7.9,13.6 C8.4,13.8 8.9,14.2 9.1,14.7 C9.2,14.8 9.2,14.9 9.3,15 C8.9,15.1 8.4,15.3 8.1,15.6 C8,15.5 8,15.3 8,15.2 C7.9,14.7 7.7,14.2 7.3,13.8 C7.1,13.5 6.9,13.1 6.9,12.7 M6.9,16.5 C6.7,16 6.3,15.7 5.8,15.4 C5.5,15.2 5.2,14.9 5.1,14.5 C5.4,14.8 5.9,15 6.3,15 C6.9,15 7.4,15.3 7.8,15.7 C7.8,15.7 7.9,15.8 7.9,15.8 C7.6,16.1 7.4,16.6 7.2,17 C7.1,16.8 7,16.7 6.9,16.5 M5,20.6 C5.4,20.4 5.7,20 5.9,19.6 C6.1,19.1 6.5,18.6 7.1,18.4 C7.2,18.3 7.3,18.3 7.4,18.2 C7.5,18.6 7.7,19.1 8.1,19.4 C7.9,19.5 7.8,19.5 7.6,19.5 C7.1,19.6 6.6,19.8 6.2,20.2 C5.7,20.5 5.4,20.6 5,20.6 M8.8,20.6 C8.3,20.8 8,21.2 7.7,21.7 C7.5,22 7.2,22.3 6.8,22.4 C7.1,22.1 7.2,21.6 7.3,21.2 C7.3,20.6 7.6,20.1 8,19.7 C8,19.7 8.1,19.6 8.1,19.6 C8.4,19.9 8.9,20.1 9.3,20.2 C9.1,20.4 9,20.5 8.8,20.6 M10.9,14.5 C11.4,14.3 11.7,13.9 12,13.4 C12.2,13.1 12.5,12.8 12.9,12.7 C12.6,13 12.5,13.5 12.4,13.9 C12.4,14.5 12.1,15 11.7,15.4 C11.7,15.4 11.6,15.5 11.6,15.6 C11.3,15.3 10.8,15.1 10.4,15 C10.6,14.8 10.7,14.7 10.9,14.5 M12.8,22.5 C12.6,22.1 12.2,21.8 11.8,21.6 C11.3,21.4 10.8,21 10.6,20.5 C10.5,20.4 10.5,20.3 10.4,20.2 C10.8,20.1 11.3,19.9 11.6,19.6 C11.7,19.7 11.7,19.9 11.7,20 C11.8,20.5 12,21 12.4,21.4 C12.6,21.7 12.8,22.1 12.8,22.5 M12.8,18.7 C13,19.2 13.4,19.5 13.9,19.8 C14.2,20 14.5,20.3 14.6,20.7 C14.2,20.4 13.8,20.3 13.4,20.2 C12.8,20.2 12.3,19.9 11.9,19.5 C11.9,19.5 11.8,19.4 11.8,19.4 C12.1,19.1 12.3,18.7 12.5,18.2 C12.6,18.4 12.7,18.5 12.8,18.7 M13.9,15.5 C13.7,16 13.3,16.5 12.7,16.7 C12.6,16.8 12.5,16.8 12.4,16.9 C12.3,16.5 12.1,16.1 11.8,15.8 L11.7,15.7 C11.9,15.6 12,15.6 12.2,15.6 C12.7,15.6 13.2,15.3 13.6,14.9 C13.9,14.7 14.3,14.5 14.7,14.5 C14.4,14.8 14.1,15.1 13.9,15.5"/>
+                        <path class="shield-part"
+                              d="M2.6,10.2 C2.9,10.2 3.2,10.1 3.4,9.9 C3.7,9.7 4.1,9.5 4.4,9.6 C4.8,9.6 5.1,9.7 5.4,9.9 C5.6,10.1 5.9,10.2 6.2,10.2 C6.5,10.2 6.8,10.1 7,9.9 C7.3,9.7 7.7,9.5 8,9.5 C8.4,9.5 8.7,9.6 9,9.9 C9.2,10.1 9.5,10.2 9.8,10.2 L9.8,10.2 L9.8,10.2 C10.1,10.2 10.4,10.1 10.6,9.9 C11.2,9.4 12,9.4 12.7,9.9 C13.2,10.2 13.8,10.2 14.3,9.9 C14.9,9.4 15.7,9.4 16.4,9.9 C16.9,10.2 17.5,10.2 18,9.9 C18.2,9.7 18.4,9.6 18.7,9.6 L15.9,3.9 C15.5,4.2 15,4.4 14.5,4.3 C13.6,4.3 13.5,3.9 12.1,3.9 C11.3,3.8 10.6,4.1 10,4.6 L10,4.6 C9.3,4.1 8.5,3.8 7.8,3.9 C6.4,3.9 6.3,4.3 5.4,4.3 C4.9,4.4 4.4,4.3 4,3.9 L1.1,9.6 C1.4,9.6 1.6,9.7 1.8,9.9 C2.1,10.1 2.3,10.2 2.6,10.2 Z M12.1,4.9 C13.4,4.9 13.6,5.3 14.5,5.3 C14.9,5.3 15.3,5.3 15.7,5.1 L17.3,8.3 C17.3,8.3 17.1,8.5 15.8,8.5 C14.5,8.5 14.3,7.8 12.2,7.8 C11.6,7.8 11.1,8 10.6,8.4 L9.9,5.6 C10.5,5.1 11.3,4.8 12.1,4.9 Z M4.1,5.1 C4.5,5.3 4.9,5.3 5.3,5.3 C6.2,5.3 6.4,4.9 7.7,4.9 C8.5,4.8 9.3,5.1 9.9,5.6 L9.1,8.5 C8.7,8.1 8.1,7.9 7.5,7.9 C5.5,7.9 5.3,8.6 3.9,8.6 C2.5,8.6 2.5,8.4 2.5,8.4 L4.1,5.1 Z"/>
+                    </svg>
+                </a>
+                <button aria-expanded="false" class="Header__menu-toggle" data-expand="popup" data-expand-toggle="menu-active">
+                    <span class="screen-reader-text">Toggle menu</span>
+                </button>
+                <nav class="Header__menu" id="main-navigation">
+                    <ul class="Header__nav">
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                About
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/about/index.html" target="_parent">About St. Thomas</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/quick-facts/index.html" target="_parent">Quick Facts</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/our-campuses/index.html" target="_parent">Our Campuses</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/mission/index.html" target="_parent">Mission, Convictions &amp; Heritage</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/rankings-recognition/index.html" target="_parent">Rankings &amp; Recognition</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/leadership/index.html" target="_parent">University Leadership</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/strategic-plan-2025/index.html" target="_parent">2025 Strategic Plan</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/sustainability/index.html" target="_parent">Sustainability</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/diversity-equity-inclusion/index.html" target="_parent">Our Commitment to Welcoming All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                Academics
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/academics/index.html" target="_parent">Academics at St. Thomas</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/undergraduate/index.html" target="_parent">Undergraduate Majors &amp; Minors</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/graduate/index.html" target="_parent">Graduate Programs</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/schools-colleges/index.html" target="_parent">Schools &amp; Colleges</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/study-abroad/index.html" target="_parent">Study Abroad</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/research/index.html" target="_parent">Research</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/continuing-education/index.html" target="_parent">Continuing &amp; Professional Education</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://online.stthomas.edu/index.html" target="_parent">Online Learning</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/centers-institutes/index.html" target="_parent">Centers &amp; Institutes</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/calendars/index.html" target="_parent">Academic Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://library.stthomas.edu/index.html" target="_parent">Libraries</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                Admissions &amp; Aid
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/admissions/index.html" target="_parent">Admissions</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/undergraduate/index.html" target="_parent">Undergraduate Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://dfc.stthomas.edu/admissions-tuition/index.html" target="_parent">DFC Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/undergraduate/transfer/index.html" target="_parent">Transfer Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/international/index.html" target="_parent">International Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/veterans/index.html" target="_parent">Veterans Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/graduate/index.html" target="_parent">Graduate Admissions</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/financial-aid/index.html" target="_parent">Financial Aid</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/financial-aid/undergraduate/scholarships/index.html" target="_parent">Undergraduate Scholarships</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/financial-aid/undergraduate/index.html" target="_parent">Undergraduate Financial Aid</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/financial-aid/graduate/index.html" target="_parent">Graduate Financial Aid</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/admissions/undergraduate/request-information/index.html" target="_parent">Request Info</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/undergraduate/campus-visits/index.html" target="_parent">Schedule a Campus Visit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                Student Life
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/student-life/index.html" target="_parent">Student Life at St. Thomas</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/residence-life/index.html" target="_parent">Residence Life</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/dining/index.html" target="_parent">Dining</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-life/get-involved/index.html" target="_parent">Get Involved</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-life/support-well-being/index.html" target="_parent">Support &amp; Well-Being</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-life/inclusion-diversity/index.html" target="_parent">Inclusion &amp; Diversity</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-life/arts/index.html" target="_parent">Arts</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/career-development/index.html" target="_parent">Career Development</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/ministry/index.html" target="_parent">Campus Ministry</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                Athletics
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/athletics/index.html" target="_parent">Athletics at St. Thomas</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://tommiesports.com/ " target="_parent">Official Athletics site (Tommie Sports)</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://tommiesports.com/calendar" target="_parent">Athletics &amp; Arena Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://playyon.com/ust-intramurals/" target="_parent">Intramurals</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-affairs/departments/club-sports/index.html" target="_parent">Club Sports</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="Header__group">
+                        <ul class="Header__audience">
+                            <li>
+                                <a class="link-underline" href="https://stthomas.edu/current-students/index.html" target="_parent">Current Students</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://stthomas.edu/current-families/index.html" target="_parent">Parents &amp; Families</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://alumni.stthomas.edu/index.html" target="_parent">Alumni</a>
+                            </li>
+                        </ul>
+                        <div class="Header__actions-wrapper">
+                            <ul class="Header__actions">
+                                <li>
+                                    <a class="link-underline link-heart" href="https://give.stthomas.edu/index.html" target="_parent">Give</a>
+                                </li>
+                                <li>
+                                    <a class="link-underline link-news" href="https://news.stthomas.edu/" target="_parent">News</a>
+                                </li>
+                                <li>
+                                    <a class="link-underline link-info" href="https://one.stthomas.edu/" target="_parent">OneStThomas</a>
+                                </li>
+                            </ul>
+                            <ul class="Header__actions small-only">
+                                <li>
+                                    <a class="link-underline link-location" href="https://stthomas.edu/admissions/undergraduate/campus-visits/index.html" target="_parent">Visit Campus</a>
+                                </li>
+                                <li>
+                                    <a class="link-underline link-point" href="https://stthomas.edu/application/index.html" target="_parent">Apply Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="Header__actions Header__actions--main">
+                        <li>
+                            <a class="link-underline link-location" href="https://stthomas.edu/admissions/undergraduate/campus-visits/index.html" target="_parent">Visit Campus</a>
+                        </li>
+                        <li>
+                            <a class="link-underline link-point" href="https://stthomas.edu/application/index.html" target="_parent">Apply Now</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button aria-expanded="false" class="Header__search-toggle" data-expand="popup" data-expand-toggle="search-active">
+                    <span class="screen-reader-text">Toggle search</span>
+                </button>
+                <div class="Header__search">
+                    <div class="Header__search-container">
+                        <div class="h3">What can we help you find?</div>
+                        <form action="//search.stthomas.edu/search/" class="Header__form">
+                            <label class="Header__label">
+                                <span class="screen-reader-text">Search</span>
+                                <input aria-label="Search Input" class="Header__input" name="q" placeholder="Search..." type="search"/>
+                            </label>
+                            <button class="Header__submit">
+                                <span class="screen-reader-text">Submit</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+                                    <path d="M13.273 7.818a5.455 5.455 0 1 1-10.91 0 5.455 5.455 0 0 1 10.91 0Zm-1.167 6.32a7.636 7.636 0 1 1 1.617-1.477l5.741 5.262a1.091 1.091 0 0 1-1.474 1.608l-5.884-5.393Z" fill-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="Header__popular">
+                            <div class="Header__popular-title h5">Popular Search</div>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=academic+calendars">academic calendar</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=undergraduate+majors+%26+minors%2C+academics">majors &amp; minors</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=cost%2C+tuition%2C+undergraduate+scholarships">tuition &amp; scholarships</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=student+clubs+%26+organizations%2C+get+involved%2C+star">student clubs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Header__main Header__main--sticky" data-stuck="">
+                <a class="Header__logo" href="https://www.stthomas.edu">
+                    <span class="screen-reader-text">University of St. Thomas</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 128 28">
+                        <path class="st-thomas"
+                              d="M126,16.2 C124.8,14.8 123.1,14 121.3,14.1 C118.5,14.1 116.2,15.2 116.2,17.8 C116.2,22.1 123.3,20.5 123.3,22.5 C123.3,23.1 122.4,23.8 121.1,23.8 C119.8,23.9 118.6,23.4 117.8,22.4 L115.7,24 C117.2,25.5 119.2,26.2 121.2,26.1 C123.8,26.1 126.3,24.9 126.3,22.1 C126.3,17.8 119.1,19.5 119.1,17.5 C119.1,16.8 119.9,16.4 121.2,16.4 C122.4,16.3 123.5,17 124.1,18 L126,16.2 Z M111.8,21.8 C111.8,23.3 110.1,23.9 108.9,23.9 C107.9,23.9 107.1,23.3 107.1,22.5 C107.1,21.4 108,21.1 109,20.9 L110.5,20.6 C111,20.5 111.4,20.4 111.8,20.2 L111.8,21.8 Z M114.5,17.9 C114.5,14.6 112,14.1 109.6,14.1 C107.1,14.1 104.7,15.1 104.7,17.8 L107.5,17.9 C107.5,16.7 108,16.2 109.6,16.2 C110.8,16.2 111.8,16.5 111.8,17.7 L111.8,18 C110.8,18.3 109.8,18.5 108.8,18.7 L107.6,18.9 C105.9,19.2 104.1,20.2 104.1,22.5 C104.1,24.5 105.7,26.1 107.7,26.1 C107.8,26.1 107.9,26.1 108,26.1 C109.4,26.1 110.7,25.6 111.7,24.8 C111.7,25.2 111.8,25.5 112,25.8 L114.9,25.8 C114.6,25.2 114.4,24.5 114.5,23.9 L114.5,17.9 L114.5,17.9 Z M85.7,25.9 L88.5,25.9 L88.5,19.9 C88.5,18.3 89.4,16.8 90.9,16.8 C92.2,16.8 92.8,17.7 92.8,19 L92.8,26 L95.6,26 L95.6,20 C95.6,18.4 96.5,16.9 98.1,16.9 C99.4,16.9 100,17.8 100,19.1 L100,26.1 L102.8,26.1 L102.8,18 C102.8,15.5 101.3,14.3 98.8,14.3 C97.4,14.3 96.1,14.9 95.3,16 C94.6,14.8 93.3,14.1 91.9,14.3 C90.6,14.3 89.4,14.8 88.6,15.7 L88.6,14.6 L85.8,14.6 L85.8,25.9 L85.7,25.9 Z M78.8,16.7 C80.8,16.7 81.8,18.4 81.8,20.2 C81.8,22 80.8,23.7 78.8,23.7 C76.8,23.7 75.8,22 75.8,20.2 C75.8,18.4 76.8,16.7 78.8,16.7 Z M78.8,14.2 C75.1,14.2 72.9,16.8 72.9,20.2 C72.9,23.6 75.1,26.2 78.8,26.2 C82.5,26.2 84.7,23.6 84.7,20.2 C84.7,16.8 82.5,14.2 78.8,14.2 Z M61.1,25.9 L63.9,25.9 L63.9,20 C63.9,18.6 64.5,16.8 66.6,16.8 C68,16.8 68.6,17.5 68.6,19.1 L68.6,25.9 L71.4,25.9 L71.4,18.3 C71.4,15 69.2,14.2 67.2,14.2 C65.9,14.1 64.7,14.6 63.9,15.6 L63.9,15.6 L63.9,9.8 L61.1,9.8 L61.1,25.9 L61.1,25.9 Z M52.6,25.9 L55.6,25.9 L55.6,12.6 L60,12.6 L60,9.8 L48.1,9.8 L48.1,12.6 L52.5,12.6 L52.6,25.9 Z M44.7,25.9 L47.7,25.9 L47.7,22.8 L44.7,22.8 L44.7,25.9 Z M38.2,14.4 L36.5,14.4 L36.5,16.4 L38.2,16.4 L38.2,23.2 C38.2,24.9 39,26 41.2,26 C41.9,26 42.7,25.9 43.4,25.7 L43.4,23.4 C43,23.5 42.6,23.5 42.2,23.5 C41.1,23.5 41,23 41,22.1 L41,16.3 L43.5,16.3 L43.5,14.3 L41,14.3 L41,10.2 L38.2,10.2 L38.2,14.4 Z M22.2,22.9 C23.8,25.1 26.4,26.4 29.2,26.3 C32.6,26.3 36.3,24.9 36.3,21 C36.3,17.9 34,17 31.6,16.4 L29.6,16 C27.8,15.6 26.3,15.3 26.3,13.9 C26.3,12.8 27.6,12.1 29.4,12.1 C31.1,12 32.8,12.9 33.6,14.4 L36.1,12.5 C34.5,10.4 32,9.2 29.4,9.3 C26.4,9.3 23.1,10.9 23.1,14.3 C23.1,17.3 25.4,18.2 27.9,18.8 L29.7,19.2 C31.8,19.7 33,20.1 33,21.3 C33,22.9 31.1,23.4 29.6,23.4 C27.7,23.5 25.8,22.6 24.7,21 L22.2,22.9 Z"/>
+                        <path class="university-of"
+                              d="M77.2,6.2 L78.1,6.2 L78.1,4.2 L80.1,4.2 L80.1,3.4 L78.1,3.4 L78.1,2.2 L80.4,2.2 L80.4,1.4 L77.2,1.4 L77.2,6.2 Z M73.3,1.3 C72,1.3 71,2.4 71,3.7 C71,3.8 71,3.8 71,3.9 C70.9,5.2 71.8,6.3 73.1,6.4 C74.4,6.5 75.5,5.6 75.6,4.3 C75.6,4.2 75.6,4 75.6,3.9 C75.7,2.6 74.7,1.5 73.5,1.4 C73.4,1.3 73.3,1.3 73.3,1.3 Z M73.3,2.1 C74.3,2.1 74.7,2.9 74.7,3.8 C74.7,4.7 74.3,5.5 73.3,5.5 C72.3,5.5 71.9,4.7 71.9,3.8 C71.9,2.9 72.3,2.1 73.3,2.1 Z M65.8,6.2 L66.7,6.2 L66.7,4.3 L68.3,1.4 L67.3,1.4 L66.3,3.4 L65.3,1.4 L64.3,1.4 L65.9,4.3 L65.8,6.2 Z M60.9,6.2 L61.8,6.2 L61.8,2.2 L63.1,2.2 L63.1,1.4 L59.6,1.4 L59.6,2.2 L60.9,2.2 L60.9,6.2 Z M57.2,6.2 L58.1,6.2 L58.1,1.4 L57.2,1.4 L57.2,6.2 Z M51.4,5.3 C51.9,6 52.7,6.3 53.5,6.3 C54.5,6.3 55.6,5.9 55.6,4.7 C55.6,3.8 54.9,3.5 54.2,3.3 L53.6,3.2 C53.1,3.1 52.6,3 52.6,2.6 C52.6,2.3 53,2.1 53.5,2.1 C54,2.1 54.5,2.3 54.8,2.8 L55.5,2.2 C55,1.6 54.3,1.2 53.5,1.2 C52.6,1.2 51.6,1.7 51.6,2.7 C51.6,3.6 52.3,3.9 53,4 L53.5,4.1 C54.1,4.2 54.5,4.4 54.5,4.7 C54.5,5.2 53.9,5.3 53.5,5.3 C52.9,5.3 52.4,5 52,4.6 L51.4,5.3 Z M47.6,2.2 L48.4,2.2 C49,2.2 49.3,2.5 49.3,2.9 C49.3,3.3 49,3.6 48.6,3.6 C48.6,3.6 48.5,3.6 48.5,3.6 L47.5,3.6 L47.5,2.2 L47.6,2.2 Z M46.7,6.2 L47.6,6.2 L47.6,4.4 L48.5,4.4 L49.4,6.2 L50.4,6.2 L49.3,4.3 C49.9,4.1 50.3,3.5 50.3,2.9 C50.3,2.1 49.7,1.4 48.9,1.4 C48.8,1.4 48.8,1.4 48.7,1.4 L46.7,1.4 L46.7,6.2 Z M41.6,6.2 L45.2,6.2 L45.2,5.4 L42.5,5.4 L42.5,4.1 L44.8,4.1 L44.8,3.3 L42.5,3.3 L42.5,2.2 L45,2.2 L45,1.4 L41.6,1.4 L41.6,6.2 Z M37.6,6.2 L38.8,6.2 L40.2,1.4 L39.3,1.4 L38.2,5.2 L38.2,5.2 L37.1,1.4 L36.2,1.4 L37.6,6.2 Z M33.9,6.2 L34.8,6.2 L34.8,1.4 L33.9,1.4 L33.9,6.2 Z M28.3,6.2 L29.1,6.2 L29.1,2.8 L29.1,2.8 L31.1,6.2 L32,6.2 L32,1.4 L31.2,1.4 L31.2,4.8 L31.2,4.8 L29.2,1.4 L28.4,1.4 L28.3,6.2 Z M26.5,1.4 L25.6,1.4 L25.6,4.5 C25.6,5.1 25.4,5.5 24.6,5.5 C23.8,5.5 23.6,5.1 23.6,4.5 L23.6,1.4 L22.7,1.4 L22.7,4.7 C22.7,5.7 23.5,6.3 24.6,6.3 C25.7,6.3 26.5,5.7 26.5,4.7 L26.5,1.4 Z"/>
+                        <path class="shield-part"
+                              d="M18.7,11 C18.5,11 18.4,11.1 18.3,11.2 C17.7,11.7 16.8,11.7 16.2,11.2 C15.7,10.9 15.1,10.9 14.6,11.2 C14,11.7 13.1,11.7 12.5,11.2 C12,10.9 11.4,10.9 10.9,11.2 C10.7,11.3 10.6,11.4 10.4,11.5 L10.4,15 C10.2,15 10.1,15 9.9,15 C9.7,15 9.6,15 9.4,15 L9.4,11.5 C9.2,11.5 9,11.4 8.9,11.2 C8.7,11 8.4,10.9 8.1,10.9 C7.8,10.9 7.5,11 7.3,11.2 C7,11.4 6.6,11.6 6.2,11.6 C5.8,11.6 5.4,11.5 5.1,11.2 C5,11 4.7,10.9 4.4,10.9 C4.1,10.9 3.8,11 3.6,11.2 C3.3,11.4 2.9,11.6 2.5,11.6 C2.1,11.6 1.7,11.5 1.5,11.2 C1.3,11.1 1.2,11 1,11 C0.9,13.1 1.1,15.1 1.7,17.1 L7.1,17.1 C7.1,17.3 7.1,17.4 7.1,17.6 C7.1,17.8 7.1,18 7.2,18.1 L2.1,18.1 C3.5,21.6 6,24.4 9.3,26.2 L9.3,20.2 C9.5,20.2 9.6,20.2 9.8,20.2 C10,20.2 10.1,20.2 10.3,20.2 L10.3,26.2 C13.6,24.5 16.2,21.6 17.5,18.1 L12.4,18.1 C12.4,17.9 12.5,17.8 12.5,17.6 C12.5,17.4 12.5,17.3 12.5,17.1 L18,17.1 C18.6,15.1 18.8,13.1 18.7,11 M6.9,12.7 C7.1,13.1 7.5,13.4 7.9,13.6 C8.4,13.8 8.9,14.2 9.1,14.7 C9.2,14.8 9.2,14.9 9.3,15 C8.9,15.1 8.4,15.3 8.1,15.6 C8,15.5 8,15.3 8,15.2 C7.9,14.7 7.7,14.2 7.3,13.8 C7.1,13.5 6.9,13.1 6.9,12.7 M6.9,16.5 C6.7,16 6.3,15.7 5.8,15.4 C5.5,15.2 5.2,14.9 5.1,14.5 C5.4,14.8 5.9,15 6.3,15 C6.9,15 7.4,15.3 7.8,15.7 C7.8,15.7 7.9,15.8 7.9,15.8 C7.6,16.1 7.4,16.6 7.2,17 C7.1,16.8 7,16.7 6.9,16.5 M5,20.6 C5.4,20.4 5.7,20 5.9,19.6 C6.1,19.1 6.5,18.6 7.1,18.4 C7.2,18.3 7.3,18.3 7.4,18.2 C7.5,18.6 7.7,19.1 8.1,19.4 C7.9,19.5 7.8,19.5 7.6,19.5 C7.1,19.6 6.6,19.8 6.2,20.2 C5.7,20.5 5.4,20.6 5,20.6 M8.8,20.6 C8.3,20.8 8,21.2 7.7,21.7 C7.5,22 7.2,22.3 6.8,22.4 C7.1,22.1 7.2,21.6 7.3,21.2 C7.3,20.6 7.6,20.1 8,19.7 C8,19.7 8.1,19.6 8.1,19.6 C8.4,19.9 8.9,20.1 9.3,20.2 C9.1,20.4 9,20.5 8.8,20.6 M10.9,14.5 C11.4,14.3 11.7,13.9 12,13.4 C12.2,13.1 12.5,12.8 12.9,12.7 C12.6,13 12.5,13.5 12.4,13.9 C12.4,14.5 12.1,15 11.7,15.4 C11.7,15.4 11.6,15.5 11.6,15.6 C11.3,15.3 10.8,15.1 10.4,15 C10.6,14.8 10.7,14.7 10.9,14.5 M12.8,22.5 C12.6,22.1 12.2,21.8 11.8,21.6 C11.3,21.4 10.8,21 10.6,20.5 C10.5,20.4 10.5,20.3 10.4,20.2 C10.8,20.1 11.3,19.9 11.6,19.6 C11.7,19.7 11.7,19.9 11.7,20 C11.8,20.5 12,21 12.4,21.4 C12.6,21.7 12.8,22.1 12.8,22.5 M12.8,18.7 C13,19.2 13.4,19.5 13.9,19.8 C14.2,20 14.5,20.3 14.6,20.7 C14.2,20.4 13.8,20.3 13.4,20.2 C12.8,20.2 12.3,19.9 11.9,19.5 C11.9,19.5 11.8,19.4 11.8,19.4 C12.1,19.1 12.3,18.7 12.5,18.2 C12.6,18.4 12.7,18.5 12.8,18.7 M13.9,15.5 C13.7,16 13.3,16.5 12.7,16.7 C12.6,16.8 12.5,16.8 12.4,16.9 C12.3,16.5 12.1,16.1 11.8,15.8 L11.7,15.7 C11.9,15.6 12,15.6 12.2,15.6 C12.7,15.6 13.2,15.3 13.6,14.9 C13.9,14.7 14.3,14.5 14.7,14.5 C14.4,14.8 14.1,15.1 13.9,15.5"/>
+                        <path class="shield-part"
+                              d="M2.6,10.2 C2.9,10.2 3.2,10.1 3.4,9.9 C3.7,9.7 4.1,9.5 4.4,9.6 C4.8,9.6 5.1,9.7 5.4,9.9 C5.6,10.1 5.9,10.2 6.2,10.2 C6.5,10.2 6.8,10.1 7,9.9 C7.3,9.7 7.7,9.5 8,9.5 C8.4,9.5 8.7,9.6 9,9.9 C9.2,10.1 9.5,10.2 9.8,10.2 L9.8,10.2 L9.8,10.2 C10.1,10.2 10.4,10.1 10.6,9.9 C11.2,9.4 12,9.4 12.7,9.9 C13.2,10.2 13.8,10.2 14.3,9.9 C14.9,9.4 15.7,9.4 16.4,9.9 C16.9,10.2 17.5,10.2 18,9.9 C18.2,9.7 18.4,9.6 18.7,9.6 L15.9,3.9 C15.5,4.2 15,4.4 14.5,4.3 C13.6,4.3 13.5,3.9 12.1,3.9 C11.3,3.8 10.6,4.1 10,4.6 L10,4.6 C9.3,4.1 8.5,3.8 7.8,3.9 C6.4,3.9 6.3,4.3 5.4,4.3 C4.9,4.4 4.4,4.3 4,3.9 L1.1,9.6 C1.4,9.6 1.6,9.7 1.8,9.9 C2.1,10.1 2.3,10.2 2.6,10.2 Z M12.1,4.9 C13.4,4.9 13.6,5.3 14.5,5.3 C14.9,5.3 15.3,5.3 15.7,5.1 L17.3,8.3 C17.3,8.3 17.1,8.5 15.8,8.5 C14.5,8.5 14.3,7.8 12.2,7.8 C11.6,7.8 11.1,8 10.6,8.4 L9.9,5.6 C10.5,5.1 11.3,4.8 12.1,4.9 Z M4.1,5.1 C4.5,5.3 4.9,5.3 5.3,5.3 C6.2,5.3 6.4,4.9 7.7,4.9 C8.5,4.8 9.3,5.1 9.9,5.6 L9.1,8.5 C8.7,8.1 8.1,7.9 7.5,7.9 C5.5,7.9 5.3,8.6 3.9,8.6 C2.5,8.6 2.5,8.4 2.5,8.4 L4.1,5.1 Z"/>
+                    </svg>
+                </a>
+                <button aria-expanded="false" class="Header__menu-toggle" data-expand="popup" data-expand-toggle="menu-active">
+                    <span class="screen-reader-text">Toggle menu</span>
+                </button>
+                <nav class="Header__menu">
+                    <ul class="Header__nav">
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                About
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/about/index.html" target="_parent">About St. Thomas</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/quick-facts/index.html" target="_parent">Quick Facts</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/our-campuses/index.html" target="_parent">Our Campuses</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/mission/index.html" target="_parent">Mission, Convictions &amp; Heritage</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/rankings-recognition/index.html" target="_parent">Rankings &amp; Recognition</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/leadership/index.html" target="_parent">University Leadership</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/strategic-plan-2025/index.html" target="_parent">2025 Strategic Plan</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/sustainability/index.html" target="_parent">Sustainability</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/about/diversity-equity-inclusion/index.html" target="_parent">Our Commitment to Welcoming All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                Academics
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/academics/index.html" target="_parent">Academics at St. Thomas</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/undergraduate/index.html" target="_parent">Undergraduate Majors &amp; Minors</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/graduate/index.html" target="_parent">Graduate Programs</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/schools-colleges/index.html" target="_parent">Schools &amp; Colleges</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/study-abroad/index.html" target="_parent">Study Abroad</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/research/index.html" target="_parent">Research</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/continuing-education/index.html" target="_parent">Continuing &amp; Professional Education</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://online.stthomas.edu/index.html" target="_parent">Online Learning</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/centers-institutes/index.html" target="_parent">Centers &amp; Institutes</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/academics/calendars/index.html" target="_parent">Academic Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://library.stthomas.edu/index.html" target="_parent">Libraries</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                Admissions &amp; Aid
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/admissions/index.html" target="_parent">Admissions</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/undergraduate/index.html" target="_parent">Undergraduate Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://dfc.stthomas.edu/admissions-tuition/index.html" target="_parent">DFC Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/undergraduate/transfer/index.html" target="_parent">Transfer Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/international/index.html" target="_parent">International Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/veterans/index.html" target="_parent">Veterans Admissions</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/graduate/index.html" target="_parent">Graduate Admissions</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/financial-aid/index.html" target="_parent">Financial Aid</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/financial-aid/undergraduate/scholarships/index.html" target="_parent">Undergraduate Scholarships</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/financial-aid/undergraduate/index.html" target="_parent">Undergraduate Financial Aid</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/financial-aid/graduate/index.html" target="_parent">Graduate Financial Aid</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/admissions/undergraduate/request-information/index.html" target="_parent">Request Info</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/admissions/undergraduate/campus-visits/index.html" target="_parent">Schedule a Campus Visit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                Student Life
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/student-life/index.html" target="_parent">Student Life at St. Thomas</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/residence-life/index.html" target="_parent">Residence Life</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/dining/index.html" target="_parent">Dining</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-life/get-involved/index.html" target="_parent">Get Involved</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-life/support-well-being/index.html" target="_parent">Support &amp; Well-Being</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-life/inclusion-diversity/index.html" target="_parent">Inclusion &amp; Diversity</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-life/arts/index.html" target="_parent">Arts</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/career-development/index.html" target="_parent">Career Development</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/ministry/index.html" target="_parent">Campus Ministry</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button aria-expanded="false" class="Header__subnav-toggle link-underline" data-expand-lock="">
+                                Athletics
+                            </button>
+                            <div class="Header__subnav">
+                                <div class="Header__all-children">
+                                    <div class="Header__first-child">
+                                        <a href="https://stthomas.edu/athletics/index.html" target="_parent">Athletics at St. Thomas</a>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="link-underline" href="https://tommiesports.com/ " target="_parent">Official Athletics site (Tommie Sports)</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://tommiesports.com/calendar" target="_parent">Athletics &amp; Arena Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://playyon.com/ust-intramurals/" target="_parent">Intramurals</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-underline" href="https://stthomas.edu/student-affairs/departments/club-sports/index.html" target="_parent">Club Sports</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="Header__actions Header__actions--main">
+                        <li>
+                            <a class="link-underline link-location" href="https://stthomas.edu/admissions/undergraduate/campus-visits/index.html" target="_parent">Visit Campus</a>
+                        </li>
+                        <li>
+                            <a class="link-underline link-point" href="https://stthomas.edu/application/index.html" target="_parent">Apply Now</a>
+                        </li>
+                    </ul>
+                    <div class="Header__group small-only">
+                        <ul class="Header__audience">
+                            <li>
+                                <a class="link-underline" href="https://stthomas.edu/current-students/index.html" target="_parent">Current Students</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://stthomas.edu/current-families/index.html" target="_parent">Parents &amp; Families</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://alumni.stthomas.edu/index.html" target="_parent">Alumni</a>
+                            </li>
+                        </ul>
+                        <div class="Header__actions-wrapper">
+                            <ul class="Header__actions">
+                                <li>
+                                    <a class="link-underline link-heart" href="https://give.stthomas.edu/index.html" target="_parent">Give</a>
+                                </li>
+                                <li>
+                                    <a class="link-underline link-news" href="https://news.stthomas.edu/" target="_parent">News</a>
+                                </li>
+                                <li>
+                                    <a class="link-underline link-info" href="https://one.stthomas.edu/" target="_parent">OneStThomas</a>
+                                </li>
+                            </ul>
+                            <ul class="Header__actions small-only">
+                                <li>
+                                    <a class="link-underline link-location" href="https://stthomas.edu/admissions/undergraduate/campus-visits/index.html" target="_parent">Visit Campus</a>
+                                </li>
+                                <li>
+                                    <a class="link-underline link-point" href="https://stthomas.edu/application/index.html" target="_parent">Apply Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <button aria-expanded="false" class="Header__search-toggle" data-expand="popup" data-expand-toggle="search-active">
+                    <span class="screen-reader-text">Toggle search</span>
+                </button>
+                <div class="Header__search">
+                    <div class="Header__search-container">
+                        <div class="h3">What can we help you find?</div>
+                        <form action="//search.stthomas.edu/search/" class="Header__form">
+                            <label class="Header__label">
+                                <span class="screen-reader-text">Search</span>
+                                <input aria-label="Search Input" class="Header__input" name="q" placeholder="Search..." type="search"/>
+                            </label>
+                            <button class="Header__submit">
+                                <span class="screen-reader-text">Submit</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+                                    <path d="M13.273 7.818a5.455 5.455 0 1 1-10.91 0 5.455 5.455 0 0 1 10.91 0Zm-1.167 6.32a7.636 7.636 0 1 1 1.617-1.477l5.741 5.262a1.091 1.091 0 0 1-1.474 1.608l-5.884-5.393Z" fill-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="Header__popular">
+                            <div class="Header__popular-title h5">Popular Search</div>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=academic+calendars">academic calendar</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=undergraduate+majors+%26+minors%2C+academics">majors &amp; minors</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=cost%2C+tuition%2C+undergraduate+scholarships">tuition &amp; scholarships</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=student+clubs+%26+organizations%2C+get+involved%2C+star">student clubs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <nav aria-label="Skip navigation" class="tab-navigation" id="access">
+            <a class="ally-skip-link" href="#content" tabindex="1">Skip to primary content</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="the-main">
+            <!--<system-region name="BREADCRUMBS"/>-->
+            <div id="content">
+                <section class="block block_full-width">
+                    <div class="block__inner">
+                        <div class="block__main">
+                            <div class="block_full-width-block">
+                                <div class="slds-scope" style="min-height: 400px;">
+                                    <apex:insert name="body"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="Footer">
+            <apex:insert name="footer"/>
+            <div class="Footer__contact zero t-sm">
+                <a class="Footer__logo" href="https://www.stthomas.edu">
+                    <span class="screen-reader-text">University of St. Thomas</span>
+                    <svg version="1.1" viewBox="0 0 128 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path class="st-thomas"
+                              d="M126,16.2 C124.8,14.8 123.1,14 121.3,14.1 C118.5,14.1 116.2,15.2 116.2,17.8 C116.2,22.1 123.3,20.5 123.3,22.5 C123.3,23.1 122.4,23.8 121.1,23.8 C119.8,23.9 118.6,23.4 117.8,22.4 L115.7,24 C117.2,25.5 119.2,26.2 121.2,26.1 C123.8,26.1 126.3,24.9 126.3,22.1 C126.3,17.8 119.1,19.5 119.1,17.5 C119.1,16.8 119.9,16.4 121.2,16.4 C122.4,16.3 123.5,17 124.1,18 L126,16.2 Z M111.8,21.8 C111.8,23.3 110.1,23.9 108.9,23.9 C107.9,23.9 107.1,23.3 107.1,22.5 C107.1,21.4 108,21.1 109,20.9 L110.5,20.6 C111,20.5 111.4,20.4 111.8,20.2 L111.8,21.8 Z M114.5,17.9 C114.5,14.6 112,14.1 109.6,14.1 C107.1,14.1 104.7,15.1 104.7,17.8 L107.5,17.9 C107.5,16.7 108,16.2 109.6,16.2 C110.8,16.2 111.8,16.5 111.8,17.7 L111.8,18 C110.8,18.3 109.8,18.5 108.8,18.7 L107.6,18.9 C105.9,19.2 104.1,20.2 104.1,22.5 C104.1,24.5 105.7,26.1 107.7,26.1 C107.8,26.1 107.9,26.1 108,26.1 C109.4,26.1 110.7,25.6 111.7,24.8 C111.7,25.2 111.8,25.5 112,25.8 L114.9,25.8 C114.6,25.2 114.4,24.5 114.5,23.9 L114.5,17.9 L114.5,17.9 Z M85.7,25.9 L88.5,25.9 L88.5,19.9 C88.5,18.3 89.4,16.8 90.9,16.8 C92.2,16.8 92.8,17.7 92.8,19 L92.8,26 L95.6,26 L95.6,20 C95.6,18.4 96.5,16.9 98.1,16.9 C99.4,16.9 100,17.8 100,19.1 L100,26.1 L102.8,26.1 L102.8,18 C102.8,15.5 101.3,14.3 98.8,14.3 C97.4,14.3 96.1,14.9 95.3,16 C94.6,14.8 93.3,14.1 91.9,14.3 C90.6,14.3 89.4,14.8 88.6,15.7 L88.6,14.6 L85.8,14.6 L85.8,25.9 L85.7,25.9 Z M78.8,16.7 C80.8,16.7 81.8,18.4 81.8,20.2 C81.8,22 80.8,23.7 78.8,23.7 C76.8,23.7 75.8,22 75.8,20.2 C75.8,18.4 76.8,16.7 78.8,16.7 Z M78.8,14.2 C75.1,14.2 72.9,16.8 72.9,20.2 C72.9,23.6 75.1,26.2 78.8,26.2 C82.5,26.2 84.7,23.6 84.7,20.2 C84.7,16.8 82.5,14.2 78.8,14.2 Z M61.1,25.9 L63.9,25.9 L63.9,20 C63.9,18.6 64.5,16.8 66.6,16.8 C68,16.8 68.6,17.5 68.6,19.1 L68.6,25.9 L71.4,25.9 L71.4,18.3 C71.4,15 69.2,14.2 67.2,14.2 C65.9,14.1 64.7,14.6 63.9,15.6 L63.9,15.6 L63.9,9.8 L61.1,9.8 L61.1,25.9 L61.1,25.9 Z M52.6,25.9 L55.6,25.9 L55.6,12.6 L60,12.6 L60,9.8 L48.1,9.8 L48.1,12.6 L52.5,12.6 L52.6,25.9 Z M44.7,25.9 L47.7,25.9 L47.7,22.8 L44.7,22.8 L44.7,25.9 Z M38.2,14.4 L36.5,14.4 L36.5,16.4 L38.2,16.4 L38.2,23.2 C38.2,24.9 39,26 41.2,26 C41.9,26 42.7,25.9 43.4,25.7 L43.4,23.4 C43,23.5 42.6,23.5 42.2,23.5 C41.1,23.5 41,23 41,22.1 L41,16.3 L43.5,16.3 L43.5,14.3 L41,14.3 L41,10.2 L38.2,10.2 L38.2,14.4 Z M22.2,22.9 C23.8,25.1 26.4,26.4 29.2,26.3 C32.6,26.3 36.3,24.9 36.3,21 C36.3,17.9 34,17 31.6,16.4 L29.6,16 C27.8,15.6 26.3,15.3 26.3,13.9 C26.3,12.8 27.6,12.1 29.4,12.1 C31.1,12 32.8,12.9 33.6,14.4 L36.1,12.5 C34.5,10.4 32,9.2 29.4,9.3 C26.4,9.3 23.1,10.9 23.1,14.3 C23.1,17.3 25.4,18.2 27.9,18.8 L29.7,19.2 C31.8,19.7 33,20.1 33,21.3 C33,22.9 31.1,23.4 29.6,23.4 C27.7,23.5 25.8,22.6 24.7,21 L22.2,22.9 Z"/>
+                        <path class="university-of"
+                              d="M77.2,6.2 L78.1,6.2 L78.1,4.2 L80.1,4.2 L80.1,3.4 L78.1,3.4 L78.1,2.2 L80.4,2.2 L80.4,1.4 L77.2,1.4 L77.2,6.2 Z M73.3,1.3 C72,1.3 71,2.4 71,3.7 C71,3.8 71,3.8 71,3.9 C70.9,5.2 71.8,6.3 73.1,6.4 C74.4,6.5 75.5,5.6 75.6,4.3 C75.6,4.2 75.6,4 75.6,3.9 C75.7,2.6 74.7,1.5 73.5,1.4 C73.4,1.3 73.3,1.3 73.3,1.3 Z M73.3,2.1 C74.3,2.1 74.7,2.9 74.7,3.8 C74.7,4.7 74.3,5.5 73.3,5.5 C72.3,5.5 71.9,4.7 71.9,3.8 C71.9,2.9 72.3,2.1 73.3,2.1 Z M65.8,6.2 L66.7,6.2 L66.7,4.3 L68.3,1.4 L67.3,1.4 L66.3,3.4 L65.3,1.4 L64.3,1.4 L65.9,4.3 L65.8,6.2 Z M60.9,6.2 L61.8,6.2 L61.8,2.2 L63.1,2.2 L63.1,1.4 L59.6,1.4 L59.6,2.2 L60.9,2.2 L60.9,6.2 Z M57.2,6.2 L58.1,6.2 L58.1,1.4 L57.2,1.4 L57.2,6.2 Z M51.4,5.3 C51.9,6 52.7,6.3 53.5,6.3 C54.5,6.3 55.6,5.9 55.6,4.7 C55.6,3.8 54.9,3.5 54.2,3.3 L53.6,3.2 C53.1,3.1 52.6,3 52.6,2.6 C52.6,2.3 53,2.1 53.5,2.1 C54,2.1 54.5,2.3 54.8,2.8 L55.5,2.2 C55,1.6 54.3,1.2 53.5,1.2 C52.6,1.2 51.6,1.7 51.6,2.7 C51.6,3.6 52.3,3.9 53,4 L53.5,4.1 C54.1,4.2 54.5,4.4 54.5,4.7 C54.5,5.2 53.9,5.3 53.5,5.3 C52.9,5.3 52.4,5 52,4.6 L51.4,5.3 Z M47.6,2.2 L48.4,2.2 C49,2.2 49.3,2.5 49.3,2.9 C49.3,3.3 49,3.6 48.6,3.6 C48.6,3.6 48.5,3.6 48.5,3.6 L47.5,3.6 L47.5,2.2 L47.6,2.2 Z M46.7,6.2 L47.6,6.2 L47.6,4.4 L48.5,4.4 L49.4,6.2 L50.4,6.2 L49.3,4.3 C49.9,4.1 50.3,3.5 50.3,2.9 C50.3,2.1 49.7,1.4 48.9,1.4 C48.8,1.4 48.8,1.4 48.7,1.4 L46.7,1.4 L46.7,6.2 Z M41.6,6.2 L45.2,6.2 L45.2,5.4 L42.5,5.4 L42.5,4.1 L44.8,4.1 L44.8,3.3 L42.5,3.3 L42.5,2.2 L45,2.2 L45,1.4 L41.6,1.4 L41.6,6.2 Z M37.6,6.2 L38.8,6.2 L40.2,1.4 L39.3,1.4 L38.2,5.2 L38.2,5.2 L37.1,1.4 L36.2,1.4 L37.6,6.2 Z M33.9,6.2 L34.8,6.2 L34.8,1.4 L33.9,1.4 L33.9,6.2 Z M28.3,6.2 L29.1,6.2 L29.1,2.8 L29.1,2.8 L31.1,6.2 L32,6.2 L32,1.4 L31.2,1.4 L31.2,4.8 L31.2,4.8 L29.2,1.4 L28.4,1.4 L28.3,6.2 Z M26.5,1.4 L25.6,1.4 L25.6,4.5 C25.6,5.1 25.4,5.5 24.6,5.5 C23.8,5.5 23.6,5.1 23.6,4.5 L23.6,1.4 L22.7,1.4 L22.7,4.7 C22.7,5.7 23.5,6.3 24.6,6.3 C25.7,6.3 26.5,5.7 26.5,4.7 L26.5,1.4 Z"/>
+                        <path class="shield-part"
+                              d="M18.7,11 C18.5,11 18.4,11.1 18.3,11.2 C17.7,11.7 16.8,11.7 16.2,11.2 C15.7,10.9 15.1,10.9 14.6,11.2 C14,11.7 13.1,11.7 12.5,11.2 C12,10.9 11.4,10.9 10.9,11.2 C10.7,11.3 10.6,11.4 10.4,11.5 L10.4,15 C10.2,15 10.1,15 9.9,15 C9.7,15 9.6,15 9.4,15 L9.4,11.5 C9.2,11.5 9,11.4 8.9,11.2 C8.7,11 8.4,10.9 8.1,10.9 C7.8,10.9 7.5,11 7.3,11.2 C7,11.4 6.6,11.6 6.2,11.6 C5.8,11.6 5.4,11.5 5.1,11.2 C5,11 4.7,10.9 4.4,10.9 C4.1,10.9 3.8,11 3.6,11.2 C3.3,11.4 2.9,11.6 2.5,11.6 C2.1,11.6 1.7,11.5 1.5,11.2 C1.3,11.1 1.2,11 1,11 C0.9,13.1 1.1,15.1 1.7,17.1 L7.1,17.1 C7.1,17.3 7.1,17.4 7.1,17.6 C7.1,17.8 7.1,18 7.2,18.1 L2.1,18.1 C3.5,21.6 6,24.4 9.3,26.2 L9.3,20.2 C9.5,20.2 9.6,20.2 9.8,20.2 C10,20.2 10.1,20.2 10.3,20.2 L10.3,26.2 C13.6,24.5 16.2,21.6 17.5,18.1 L12.4,18.1 C12.4,17.9 12.5,17.8 12.5,17.6 C12.5,17.4 12.5,17.3 12.5,17.1 L18,17.1 C18.6,15.1 18.8,13.1 18.7,11 M6.9,12.7 C7.1,13.1 7.5,13.4 7.9,13.6 C8.4,13.8 8.9,14.2 9.1,14.7 C9.2,14.8 9.2,14.9 9.3,15 C8.9,15.1 8.4,15.3 8.1,15.6 C8,15.5 8,15.3 8,15.2 C7.9,14.7 7.7,14.2 7.3,13.8 C7.1,13.5 6.9,13.1 6.9,12.7 M6.9,16.5 C6.7,16 6.3,15.7 5.8,15.4 C5.5,15.2 5.2,14.9 5.1,14.5 C5.4,14.8 5.9,15 6.3,15 C6.9,15 7.4,15.3 7.8,15.7 C7.8,15.7 7.9,15.8 7.9,15.8 C7.6,16.1 7.4,16.6 7.2,17 C7.1,16.8 7,16.7 6.9,16.5 M5,20.6 C5.4,20.4 5.7,20 5.9,19.6 C6.1,19.1 6.5,18.6 7.1,18.4 C7.2,18.3 7.3,18.3 7.4,18.2 C7.5,18.6 7.7,19.1 8.1,19.4 C7.9,19.5 7.8,19.5 7.6,19.5 C7.1,19.6 6.6,19.8 6.2,20.2 C5.7,20.5 5.4,20.6 5,20.6 M8.8,20.6 C8.3,20.8 8,21.2 7.7,21.7 C7.5,22 7.2,22.3 6.8,22.4 C7.1,22.1 7.2,21.6 7.3,21.2 C7.3,20.6 7.6,20.1 8,19.7 C8,19.7 8.1,19.6 8.1,19.6 C8.4,19.9 8.9,20.1 9.3,20.2 C9.1,20.4 9,20.5 8.8,20.6 M10.9,14.5 C11.4,14.3 11.7,13.9 12,13.4 C12.2,13.1 12.5,12.8 12.9,12.7 C12.6,13 12.5,13.5 12.4,13.9 C12.4,14.5 12.1,15 11.7,15.4 C11.7,15.4 11.6,15.5 11.6,15.6 C11.3,15.3 10.8,15.1 10.4,15 C10.6,14.8 10.7,14.7 10.9,14.5 M12.8,22.5 C12.6,22.1 12.2,21.8 11.8,21.6 C11.3,21.4 10.8,21 10.6,20.5 C10.5,20.4 10.5,20.3 10.4,20.2 C10.8,20.1 11.3,19.9 11.6,19.6 C11.7,19.7 11.7,19.9 11.7,20 C11.8,20.5 12,21 12.4,21.4 C12.6,21.7 12.8,22.1 12.8,22.5 M12.8,18.7 C13,19.2 13.4,19.5 13.9,19.8 C14.2,20 14.5,20.3 14.6,20.7 C14.2,20.4 13.8,20.3 13.4,20.2 C12.8,20.2 12.3,19.9 11.9,19.5 C11.9,19.5 11.8,19.4 11.8,19.4 C12.1,19.1 12.3,18.7 12.5,18.2 C12.6,18.4 12.7,18.5 12.8,18.7 M13.9,15.5 C13.7,16 13.3,16.5 12.7,16.7 C12.6,16.8 12.5,16.8 12.4,16.9 C12.3,16.5 12.1,16.1 11.8,15.8 L11.7,15.7 C11.9,15.6 12,15.6 12.2,15.6 C12.7,15.6 13.2,15.3 13.6,14.9 C13.9,14.7 14.3,14.5 14.7,14.5 C14.4,14.8 14.1,15.1 13.9,15.5"/>
+                        <path class="shield-part"
+                              d="M2.6,10.2 C2.9,10.2 3.2,10.1 3.4,9.9 C3.7,9.7 4.1,9.5 4.4,9.6 C4.8,9.6 5.1,9.7 5.4,9.9 C5.6,10.1 5.9,10.2 6.2,10.2 C6.5,10.2 6.8,10.1 7,9.9 C7.3,9.7 7.7,9.5 8,9.5 C8.4,9.5 8.7,9.6 9,9.9 C9.2,10.1 9.5,10.2 9.8,10.2 L9.8,10.2 L9.8,10.2 C10.1,10.2 10.4,10.1 10.6,9.9 C11.2,9.4 12,9.4 12.7,9.9 C13.2,10.2 13.8,10.2 14.3,9.9 C14.9,9.4 15.7,9.4 16.4,9.9 C16.9,10.2 17.5,10.2 18,9.9 C18.2,9.7 18.4,9.6 18.7,9.6 L15.9,3.9 C15.5,4.2 15,4.4 14.5,4.3 C13.6,4.3 13.5,3.9 12.1,3.9 C11.3,3.8 10.6,4.1 10,4.6 L10,4.6 C9.3,4.1 8.5,3.8 7.8,3.9 C6.4,3.9 6.3,4.3 5.4,4.3 C4.9,4.4 4.4,4.3 4,3.9 L1.1,9.6 C1.4,9.6 1.6,9.7 1.8,9.9 C2.1,10.1 2.3,10.2 2.6,10.2 Z M12.1,4.9 C13.4,4.9 13.6,5.3 14.5,5.3 C14.9,5.3 15.3,5.3 15.7,5.1 L17.3,8.3 C17.3,8.3 17.1,8.5 15.8,8.5 C14.5,8.5 14.3,7.8 12.2,7.8 C11.6,7.8 11.1,8 10.6,8.4 L9.9,5.6 C10.5,5.1 11.3,4.8 12.1,4.9 Z M4.1,5.1 C4.5,5.3 4.9,5.3 5.3,5.3 C6.2,5.3 6.4,4.9 7.7,4.9 C8.5,4.8 9.3,5.1 9.9,5.6 L9.1,8.5 C8.7,8.1 8.1,7.9 7.5,7.9 C5.5,7.9 5.3,8.6 3.9,8.6 C2.5,8.6 2.5,8.4 2.5,8.4 L4.1,5.1 Z"/>
+                    </svg>
+                </a>
+                <p>University of St. Thomas, Minnesota
+                    <br/>
+                    2115 Summit Avenue
+                    <br/>
+                    St. Paul, Minnesota 55105 USA
+                </p>
+                <p>
+                    <a href="tel:6519625000">(651) 962-5000</a>
+                </p>
+                <p>
+                    <a class="Button" href="https://www.stthomas.edu/contact/">
+                <span class="Button__icon">
+                    <svg fill="none" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path clip-rule="evenodd" d="M9.704 0C4.579 0 .416 4.257.416 9.496c0 1.62.408 3.146 1.109 4.481L.039 17.979c-.08.201-.035.43.112.585.147.156.368.21.568.137l3.812-1.323A9.096 9.096 0 0 0 9.704 19C14.829 19 19 14.736 19 9.496 19 4.256 14.829 0 9.704 0Zm0 1.1c4.545 0 8.22 3.75 8.22 8.396 0 4.646-3.676 8.405-8.22 8.405a8.064 8.064 0 0 1-4.804-1.58.527.527 0 0 0-.487-.068l-2.964 1.03 1.167-3.134a.56.56 0 0 0-.042-.472 8.49 8.49 0 0 1-1.083-4.181c0-4.647 3.668-8.397 8.213-8.397ZM5.32 9.504a.89.89 0 0 1 .882-.902.89.89 0 0 1 .882.902.89.89 0 0 1-.882.901.89.89 0 0 1-.882-.901Zm4.384-.902a.89.89 0 0 0-.882.902c0 .499.394.901.882.901a.89.89 0 0 0 .881-.901.89.89 0 0 0-.881-.902Zm2.62.902a.89.89 0 0 1 .881-.902c.489 0 .89.402.89.902 0 .499-.402.901-.89.901a.89.89 0 0 1-.881-.901Z" fill="#fff" fill-rule="evenodd"/>
+                    </svg>
+                </span>
+                        Contact Us
+
+                    </a>
+                </p>
+                <div class="Footer__social large-only">
+                    <a class="Footer__icon" href="https://www.facebook.com/UofStThomasMN/">
+                        <span class="screen-reader-text">Facebook</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28">
+                            <path d="m20.517 15.631.778-5.03h-4.863V7.339c0-1.376.679-2.717 2.857-2.717H21.5V.34S19.493 0 17.575 0c-4.005 0-6.623 2.409-6.623 6.769v3.833H6.5v5.03h4.452v12.157a17.804 17.804 0 0 0 5.48 0V15.63h4.085z"/>
+                        </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://www.instagram.com/uofstthomasmn/">
+                        <span class="screen-reader-text">Instagram</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                            <path d="M12 0C8.741 0 8.333.014 7.053.072c-1.277.06-2.15.262-2.912.559a5.882 5.882 0 0 0-2.125 1.383A5.882 5.882 0 0 0 .63 4.14c-.297.763-.5 1.635-.559 2.912C.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.058 1.277.262 2.15.559 2.912.307.79.716 1.46 1.383 2.127A5.882 5.882 0 0 0 4.14 23.37c.764.297 1.635.5 2.912.559C8.332 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.058 2.15-.262 2.912-.559a5.883 5.883 0 0 0 2.127-1.383 5.883 5.883 0 0 0 1.383-2.127c.297-.763.5-1.635.559-2.912.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.277-.262-2.15-.559-2.912a5.882 5.882 0 0 0-1.383-2.127A5.883 5.883 0 0 0 19.86.63c-.763-.297-1.635-.5-2.912-.559C15.667.014 15.26 0 12 0zm0 2.162c3.204 0 3.585.012 4.85.07 1.17.054 1.803.249 2.226.413.56.218.961.478 1.381.898.42.42.68.82.899 1.38.164.424.359 1.057.412 2.227.058 1.265.07 1.646.07 4.85s-.012 3.585-.07 4.85c-.053 1.17-.248 1.803-.412 2.226-.218.56-.479.961-.899 1.381s-.82.68-1.38.899c-.424.164-1.057.359-2.227.412-1.265.058-1.646.07-4.85.07s-3.585-.012-4.85-.07c-1.17-.053-1.803-.248-2.226-.412a3.718 3.718 0 0 1-1.381-.899c-.42-.42-.68-.82-.899-1.38-.164-.424-.359-1.057-.412-2.227-.058-1.265-.07-1.646-.07-4.85s.012-3.585.07-4.85c.053-1.17.248-1.803.412-2.226a3.73 3.73 0 0 1 .899-1.381c.42-.42.82-.68 1.38-.898.424-.164 1.057-.36 2.227-.413 1.265-.058 1.646-.07 4.85-.07zm6.613 1.285a1.714 1.714 0 0 0-1.47 1.696 1.714 1.714 0 0 0 3.427 0 1.714 1.714 0 0 0-1.957-1.696zM12.43 5.143a6.429 6.429 0 1 0 0 12.857 6.429 6.429 0 0 0 0-12.857zm0 2.256a4.173 4.173 0 0 1 0 8.345 4.173 4.173 0 1 1 0-8.345z"/>
+                        </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://www.linkedin.com/school/universityofstthomas/">
+                        <span class="screen-reader-text">LinkedIn</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1536">
+                            <path d="M349 511v991H19V511zm21-306q1 73-50.5 122T184 376h-2q-82 0-132-49T0 205q0-74 51.5-122.5T186 34t133 48.5T370 205zm1166 729v568h-329V972q0-105-40.5-164.5T1040 748q-63 0-105.5 34.5T871 868q-11 30-11 81v553H531q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5T1157 488q171 0 275 113.5T1536 934z"/>
+                        </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://www.tiktok.com/@universityofstthomas/">
+                        <span class="screen-reader-text">TikTok</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800" viewBox="0 0 24 24" width="800" xml:space="preserve">
+                    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
+                </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://x.com/UofStThomasMN/">
+                        <span class="screen-reader-text">X</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://www.youtube.com/universityofstthomas/">
+                        <span class="screen-reader-text">YouTube</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28">
+                            <path d="M27.415 7.123a3.543 3.543 0 0 0-2.475-2.526C22.756 4 14 4 14 4s-8.756 0-10.94.597A3.543 3.543 0 0 0 .585 7.123C0 9.351 0 14 0 14s0 4.65.585 6.877a3.543 3.543 0 0 0 2.475 2.526C5.244 24 14 24 14 24s8.756 0 10.94-.597a3.543 3.543 0 0 0 2.475-2.526C28 18.649 28 14 28 14s0-4.649-.585-6.877ZM11.2 18.286V9.714L18.474 14Z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="Footer__legal t-xs zero large-only">
+                    <p>&#169;
+                        <span id="date"></span> University of St. Thomas, Minnesota
+                    </p>
+                </div>
+            </div>
+            <div class="Footer__main">
+                <div class="Footer__nav-block">
+                    <nav class="Footer__nav">
+                        <ul>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/maps-directions/">Maps &amp; Directions</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/parking-transportation/">Parking &amp; Transportation</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/student-life/disability-resources/">Disability Resources</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/public-safety/">Public Safety</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/event-services/">Conference &amp; Event Services</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/media-relations/">Media Relations</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/jobs/">Jobs at St. Thomas</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/technology-resources/">Technology Resources (IT Help)</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/academics/accreditation/">Accreditation &amp; Assessment</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/policies/">Policies &amp; Compliance</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/title-ix/">Title IX</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://www.stthomas.edu/registrar/">Registrar</a>
+                            </li>
+                            <li>
+                                <a class="Footer__link link-underline" href="https://directory.aws.stthomas.edu/">Directory</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="Footer__links">
+                        <ul>
+                            <li>
+                                <a class="link-underline" href="https://stthomas.az1.qualtrics.com/jfe/form/SV_29nqe0td5nH798q">Report a Website Problem</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://www.stthomas.edu/policies/equal-opportunity/">EO Statement</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://www.stthomas.edu/accessibility-statement/">Accessibility</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://www.stthomas.edu/policies/online-privacy/">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://www.stthomas.edu/emergency/">Emergency</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Footer__social small-only">
+                    <a class="Footer__icon" href="https://www.facebook.com/UofStThomasMN/">
+                        <span class="screen-reader-text">Facebook</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28">
+                            <path d="m20.517 15.631.778-5.03h-4.863V7.339c0-1.376.679-2.717 2.857-2.717H21.5V.34S19.493 0 17.575 0c-4.005 0-6.623 2.409-6.623 6.769v3.833H6.5v5.03h4.452v12.157a17.804 17.804 0 0 0 5.48 0V15.63h4.085z"/>
+                        </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://www.instagram.com/uofstthomasmn/">
+                        <span class="screen-reader-text">Instagram</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                            <path d="M12 0C8.741 0 8.333.014 7.053.072c-1.277.06-2.15.262-2.912.559a5.882 5.882 0 0 0-2.125 1.383A5.882 5.882 0 0 0 .63 4.14c-.297.763-.5 1.635-.559 2.912C.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.058 1.277.262 2.15.559 2.912.307.79.716 1.46 1.383 2.127A5.882 5.882 0 0 0 4.14 23.37c.764.297 1.635.5 2.912.559C8.332 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.058 2.15-.262 2.912-.559a5.883 5.883 0 0 0 2.127-1.383 5.883 5.883 0 0 0 1.383-2.127c.297-.763.5-1.635.559-2.912.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.277-.262-2.15-.559-2.912a5.882 5.882 0 0 0-1.383-2.127A5.883 5.883 0 0 0 19.86.63c-.763-.297-1.635-.5-2.912-.559C15.667.014 15.26 0 12 0zm0 2.162c3.204 0 3.585.012 4.85.07 1.17.054 1.803.249 2.226.413.56.218.961.478 1.381.898.42.42.68.82.899 1.38.164.424.359 1.057.412 2.227.058 1.265.07 1.646.07 4.85s-.012 3.585-.07 4.85c-.053 1.17-.248 1.803-.412 2.226-.218.56-.479.961-.899 1.381s-.82.68-1.38.899c-.424.164-1.057.359-2.227.412-1.265.058-1.646.07-4.85.07s-3.585-.012-4.85-.07c-1.17-.053-1.803-.248-2.226-.412a3.718 3.718 0 0 1-1.381-.899c-.42-.42-.68-.82-.899-1.38-.164-.424-.359-1.057-.412-2.227-.058-1.265-.07-1.646-.07-4.85s.012-3.585.07-4.85c.053-1.17.248-1.803.412-2.226a3.73 3.73 0 0 1 .899-1.381c.42-.42.82-.68 1.38-.898.424-.164 1.057-.36 2.227-.413 1.265-.058 1.646-.07 4.85-.07zm6.613 1.285a1.714 1.714 0 0 0-1.47 1.696 1.714 1.714 0 0 0 3.427 0 1.714 1.714 0 0 0-1.957-1.696zM12.43 5.143a6.429 6.429 0 1 0 0 12.857 6.429 6.429 0 0 0 0-12.857zm0 2.256a4.173 4.173 0 0 1 0 8.345 4.173 4.173 0 1 1 0-8.345z"/>
+                        </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://www.linkedin.com/school/universityofstthomas/">
+                        <span class="screen-reader-text">LinkedIn</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1536">
+                            <path d="M349 511v991H19V511zm21-306q1 73-50.5 122T184 376h-2q-82 0-132-49T0 205q0-74 51.5-122.5T186 34t133 48.5T370 205zm1166 729v568h-329V972q0-105-40.5-164.5T1040 748q-63 0-105.5 34.5T871 868q-11 30-11 81v553H531q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5T1157 488q171 0 275 113.5T1536 934z"/>
+                        </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://www.tiktok.com/@universityofstthomas/">
+                        <span class="screen-reader-text">TikTok</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800" viewBox="0 0 24 24" width="800" xml:space="preserve">
+                    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
+                </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://x.com/UofStThomasMN/">
+                        <span class="screen-reader-text">X</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a class="Footer__icon" href="https://www.youtube.com/universityofstthomas/">
+                        <span class="screen-reader-text">YouTube</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28">
+                            <path d="M27.415 7.123a3.543 3.543 0 0 0-2.475-2.526C22.756 4 14 4 14 4s-8.756 0-10.94.597A3.543 3.543 0 0 0 .585 7.123C0 9.351 0 14 0 14s0 4.65.585 6.877a3.543 3.543 0 0 0 2.475 2.526C5.244 24 14 24 14 24s8.756 0 10.94-.597a3.543 3.543 0 0 0 2.475-2.526C28 18.649 28 14 28 14s0-4.649-.585-6.877ZM11.2 18.286V9.714L18.474 14Z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="Footer__legal t-xs zero small-only">
+                    <p>&#169;
+                        <span id="date"></span> University of St. Thomas, Minnesota
+                    </p>
+                </div>
+            </div>
+            <a class="Footer__back-to-top" href="#">
+                Back to Top
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 39 39">
+                        <path clip-rule="evenodd" d="M0 0h39l-.001 2.437H0V0Zm35.012 22.824L19.5 7.312 3.988 22.825l1.723 1.724 12.57-12.57V39h2.438V11.979l12.569 12.569 1.724-1.724Z" fill="#fff" fill-rule="evenodd"/>
+                    </svg>
+                </span>
+            </a>
+        </footer>
+
+    </div>
+
+    <script src="https://capricorn-static-files.aws.stthomas.edu/js/manifest.js" type="text/javascript"></script>
+    <script src="https://capricorn-static-files.aws.stthomas.edu/js/vendor.js" type="text/javascript"></script>
+    <script src="https://capricorn-static-files.aws.stthomas.edu/js/app.js" type="text/javascript"></script>
+    <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Organization",
+            "name": "University of St. Thomas",
+            "url": "https://www.stthomas.edu",
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-651-962-5000",
+                    "contactType": "customer service"
+                }
+            ]
+        }
+    </script>
+    <script src="{!URLFOR($Resource.summit__SummitEventsAssets, '/js/loading.js')}" type="text/javascript"></script>
+    </body>
+    </html>
+</apex:page>

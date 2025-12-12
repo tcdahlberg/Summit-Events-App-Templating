@@ -1,6 +1,12 @@
 {
-  "orgName": "Summit-Events-App-Templating - Feature Test Org",
+  "orgName": "Summit Events Dev - Feature",
   "edition": "Developer",
+  "features": [
+    "Communities",
+    "Sites",
+    "ForceComPlatform",
+    "EinsteinGPTForDevelopers"
+  ],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
@@ -13,12 +19,20 @@
     },
     "securitySettings": {
       "enableAdminLoginAsAnyUser": true,
+      "enableAuditFieldsInactiveOwner": true,
       "sessionSettings": {
         "forceRelogin": false
       }
     },
     "languageSettings": {
       "enableTranslationWorkbench": true
+    },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true,
+      "enableOotbProfExtUserOpsEnable": true
     }
   }
 }
