@@ -3,7 +3,7 @@
  -->
 
 <apex:page id="StThomasAlumniSEA2025" sidebar="false" lightningStyleSheets="true" showHeader="false" standardStylesheets="false" cache="false" applyHtmlTag="false">
-    <apex:slds/>
+    <apex:slds />
     <html lang="en" xml:lang="en" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <head>
         <meta charset="utf-8"/>

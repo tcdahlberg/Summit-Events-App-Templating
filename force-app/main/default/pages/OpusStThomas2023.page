@@ -3,7 +3,7 @@
  -->
 
 <apex:page id="OpusStThomas2023" sidebar="false" lightningStyleSheets="true" showHeader="false" standardStylesheets="false" cache="false" applyHtmlTag="false">
-    <apex:slds/>
+    <apex:slds />
     <html class="no-js" lang="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <head>
         <meta charset="UTF-8"/>
@@ -15,28 +15,18 @@
         <link rel="stylesheet" href="https://s3.amazonaws.com/orion-static-files/css/app.css"/>
         <link rel="stylesheet" href="https://s3.amazonaws.com/static.aws.stthomas.edu/summit-events-styles/orion/style.css"/>
         <!-- Google Tag Manager -->
-        <script>(function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-5BKTTT2');</script>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5BKTTT2');</script>
         <!-- End Google Tag Manager -->
-        <apex:insert name="scriptsHead"/>
+    <apex:insert name="scriptsHead"/>
     </head>
     <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BKTTT2"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BKTTT2"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <div class="header__container">
@@ -388,7 +378,7 @@
             <ul class="footer__externals">
                 <li class="footer__externals__item"><a href="https://www.stthomas.edu/" class="footer__externals__link">University of St. Thomas</a></li>
                 <li class="footer__externals__item"><a href="https://one.stthomas.edu" class="footer__externals__link">OneStThomas</a></li>
-                <li class="footer__externals__item"><a id="report-problem" href="https://stthomas.az1.qualtrics.com/jfe/form/SV_5Ab5cqQpmwfxRpr" target="_blank" class="footer__externals__link">Report a Website Problem</a></li>
+                <li class="footer__externals__item"><a id="report-problem" href="https://stthomas.az1.qualtrics.com/jfe/form/SV_29nqe0td5nH798q" target="_blank" class="footer__externals__link">Report a Website Problem</a></li>
                 <li class="footer__externals__item"><a href="https://www.stthomas.edu/policies/online-privacy/?utm_source=ustredirect&amp;utm_medium=Policies" class="footer__externals__link">Privacy Policy</a></li>
                 <li class="footer__externals__item"><a href="https://www.stthomas.edu/emergency/" class="footer__externals__link">Emergency</a></li>
                 <li class="footer__externals__item"><a href="https://www.stthomas.edu/accessibility-statement/" rel="noopener" target="_blank" class="footer__externals__link">Accessibility</a></li>

@@ -1,3 +1,4 @@
 {
-  "target-dev-hub": "EDA-PROD"
+  "target-dev-hub": "my-hub-org",
+  "target-org": "Summit-Events-App-Templating__dev"
 }
