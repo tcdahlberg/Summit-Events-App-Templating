@@ -1,0 +1,162 @@
+.THIS .st-thomas-sea-wrapper {
+    font-family: 'neue-haas-grotesk-display', sans-serif;
+    position: relative;
+}
+.THIS #loading .background {
+    background-image: url('/resource/StThomasGeneral2025/images/loading-shield.gif') !important;
+    width: 160px;
+    height: 160px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+.THIS .slds-col img {
+    max-width: 99%;
+}
+/* Purple Utility Bar - Force it to stay visible */
+.THIS .Header__group {
+    background-color: #510c76 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.5rem 2rem !important;
+    flex-wrap: wrap !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+    min-height: 40px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.THIS .Header__audience {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 1.5rem !important;
+    visibility: visible !important;
+}
+.THIS .Header__audience li {
+    list-style: none !important;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+.THIS .Header__audience li a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 0.875rem !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+.THIS .Header__audience li a:hover {
+    text-decoration: underline !important;
+}
+.THIS .Header__actions-wrapper {
+    display: flex !important;
+    visibility: visible !important;
+}
+.THIS .Header__actions {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 1.5rem !important;
+    visibility: visible !important;
+}
+.THIS .Header__actions li {
+    list-style: none !important;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+.THIS .Header__actions li a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 0.875rem !important;
+    display: flex !important;
+    align-items: center !important;
+    visibility: visible !important;
+}
+.THIS .Header__actions li a:hover {
+    text-decoration: underline !important;
+}
+/* Icon styles for utility bar links */
+.THIS .link-heart::before,
+.THIS .link-news::before,
+.THIS .link-info::before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 0.5rem !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+/* Prevent Header from overlapping */
+.THIS .Header {
+    position: relative !important;
+    z-index: 999 !important;
+}
+/* Footer link fix - remove double underline */
+.THIS .Footer__link.link-underline {
+    text-decoration: none !important;
+}
+.THIS .Footer__link.link-underline:hover {
+    text-decoration: underline !important;
+}
+.THIS .Footer__links a.link-underline {
+    text-decoration: none !important;
+}
+.THIS .Footer__links a.link-underline:hover {
+    text-decoration: underline !important;
+}
+/* Main Content - Centered 1200px */
+.THIS .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Screen reader text */
+.THIS .screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+/* Icon Images */
+.THIS .social-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+.THIS .search-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.THIS .back-to-top-icon {
+    font-size: 24px;
+    font-weight: bold;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .THIS .Header__group {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    .THIS .Header__audience,
+    .THIS .Header__actions {
+        gap: 1rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+}

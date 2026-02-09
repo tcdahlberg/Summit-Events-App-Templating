@@ -1,0 +1,628 @@
+/* St. Thomas 2026 Digital Experience Template CSS */
+
+.THIS .stthomas-wrapper {
+    font-family: 'neue-haas-grotesk-display', sans-serif;
+    position: relative;
+}
+
+/* ========== PURPLE UTILITY BAR ========== */
+.THIS .Header__group {
+    background-color: #510c76 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0.5rem 0 !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+    min-height: 44px !important;
+}
+
+/* Inner container for 1350px max width */
+.THIS .utility-bar-container {
+    max-width: 1350px !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 1rem !important;
+}
+
+.THIS .Header__audience {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 1.5rem !important;
+}
+
+.THIS .Header__audience li {
+    list-style: none !important;
+}
+
+.THIS .Header__audience li a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    position: relative !important;
+    padding-bottom: 2px !important;
+}
+
+.THIS .Header__audience li a::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 1px !important;
+    background-color: #fff !important;
+    transition: width 0.3s ease !important;
+}
+
+.THIS .Header__audience li a:hover::after {
+    width: 100% !important;
+}
+
+.THIS .Header__actions-wrapper {
+    display: flex !important;
+    margin-left: auto !important;
+}
+
+.THIS .Header__actions {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 1.5rem !important;
+}
+
+.THIS .Header__actions li {
+    list-style: none !important;
+}
+
+.THIS .Header__actions li a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    padding-bottom: 2px !important;
+}
+
+.THIS .Header__actions li a::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 1px !important;
+    background-color: #fff !important;
+    transition: width 0.3s ease !important;
+}
+
+.THIS .Header__actions li a:hover::after {
+    width: 100% !important;
+}
+
+/* ========== HEADER ========== */
+.THIS .Header {
+    position: relative !important;
+}
+
+.THIS .Header__main {
+    max-width: 1350px !important;
+    margin: 0 auto !important;
+    padding: 0.75rem 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 1001 !important;
+    background-color: #fff !important;
+}
+
+/* Desktop layout: logo left, search right */
+@media (min-width: 769px) {
+    .THIS .Header__logo {
+        order: 1 !important;
+    }
+
+    .THIS .Header__search-toggle {
+        order: 2 !important;
+        margin-left: auto !important;
+    }
+
+    .THIS .Header__menu-toggle {
+        display: none !important;
+    }
+}
+
+/* ========== HAMBURGER MENU BUTTON ========== */
+/* Hide any external template hamburger menus */
+.THIS .Header__hamburger {
+    display: none !important;
+}
+
+.THIS .Header__menu-toggle {
+    display: none !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    z-index: 1002 !important;
+    position: relative !important;
+    border-radius: 50% !important;
+    transition: background-color 0.3s ease !important;
+    width: 48px !important;
+    height: 48px !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Hide the external CSS pseudo-element hamburger */
+.THIS .Header__menu-toggle:before,
+.THIS .Header__menu-toggle:after {
+    display: none !important;
+    content: none !important;
+}
+
+.THIS .Header__menu-toggle[aria-expanded="true"] {
+    background-color: #fff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.THIS .hamburger-icon {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    width: 26px !important;
+}
+
+.THIS .hamburger-line {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background-color: #510c76 !important;
+    transition: all 0.3s ease !important;
+    border-radius: 2px !important;
+}
+
+.THIS .Header__menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px) !important;
+}
+
+.THIS .Header__menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.THIS .Header__menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px) !important;
+}
+
+/* ========== MOBILE MENU DRAWER ========== */
+.THIS .Header__mobile-menu {
+    position: fixed !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background-color: #fff !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1) !important;
+    transition: left 0.3s ease !important;
+    z-index: 1000 !important;
+    overflow-y: auto !important;
+}
+
+.THIS .Header__mobile-menu.active {
+    left: 0 !important;
+}
+
+.THIS .Header__mobile-menu-content {
+    padding: 5rem 1.5rem 2rem !important;
+}
+
+.THIS .mobile-menu-section {
+    margin-bottom: 2rem !important;
+}
+
+.THIS .mobile-menu-title {
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    color: #510c76 !important;
+    margin-bottom: 1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+.THIS .mobile-menu-list {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.THIS .mobile-menu-list li {
+    margin-bottom: 0.75rem !important;
+}
+
+.THIS .mobile-menu-list a {
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    display: block !important;
+    padding: 0.5rem 0 !important;
+    transition: color 0.2s ease !important;
+}
+
+.THIS .mobile-menu-list a:hover {
+    color: #510c76 !important;
+}
+
+/* ========== MENU OVERLAY ========== */
+.THIS .Header__overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    z-index: 999 !important;
+}
+
+.THIS .Header__overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ========== MAIN CONTENT ========== */
+.THIS .main-content {
+    max-width: 1365px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 400px;
+}
+
+/* ========== FOOTER LINK FIX ========== */
+.THIS .Button--primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem 1.5rem !important;
+    background-color: #982EB4 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+    transition: background-color 0.3s ease !important;
+    border: 2px solid #982EB4 !important;
+    margin-top: 0.5rem !important;
+}
+
+.THIS .Button--primary:hover {
+    background-color: #7a2491 !important;
+    border-color: #7a2491 !important;
+}
+
+.THIS .button-icon {
+    width: 18px !important;
+    height: 18px !important;
+    display: inline-block !important;
+}
+
+.THIS .Footer__link {
+    text-decoration: none !important;
+    position: relative !important;
+    padding-bottom: 2px !important;
+}
+
+.THIS .Footer__link::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 1px !important;
+    background-color: currentColor !important;
+    transition: width 0.3s ease !important;
+}
+
+.THIS .Footer__link:hover::after {
+    width: 100% !important;
+}
+
+.THIS .Footer__links a {
+    text-decoration: none !important;
+    position: relative !important;
+    padding-bottom: 2px !important;
+}
+
+.THIS .Footer__links a::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 1px !important;
+    background-color: currentColor !important;
+    transition: width 0.3s ease !important;
+}
+
+.THIS .Footer__links a:hover::after {
+    width: 100% !important;
+}
+
+/* ========== SOCIAL ICONS - CIRCULAR WITH RADIAL HOVER ========== */
+.THIS .Footer__icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background: radial-gradient(circle, #fff 0%, #fff 100%) !important;
+    border: 2px solid transparent !important;
+    transition: all 0.4s ease !important;
+    padding: 10px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.THIS .Footer__icon::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-radius: 50% !important;
+    background-color: #510c76 !important;
+    transform: translate(-50%, -50%) !important;
+    transition: width 0.4s ease, height 0.4s ease !important;
+    z-index: 0 !important;
+}
+
+.THIS .Footer__icon:hover::before {
+    width: 200% !important;
+    height: 200% !important;
+}
+
+.THIS .Footer__icon:hover {
+    border-color: #fff !important;
+}
+
+.THIS .Footer__icon img {
+    width: 24px !important;
+    height: 24px !important;
+    transition: filter 0.4s ease !important;
+    position: relative !important;
+    z-index: 1 !important;
+    filter: brightness(0) saturate(100%) invert(16%) sepia(94%) saturate(1574%) hue-rotate(273deg) brightness(79%) contrast(116%) !important;
+}
+
+.THIS .Footer__icon:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) !important;
+}
+
+/* ========== ICONS ========== */
+.THIS .social-icon {
+    width: 24px !important;
+    height: 24px !important;
+    display: block !important;
+}
+
+.THIS .search-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.THIS .back-to-top-icon {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ========== SCREEN READER TEXT ========== */
+.THIS .screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ========== LOADING OVERLAY ========== */
+.THIS #loading .background {
+    background-image: url('/resource/StThomas2026Template/images/loading-shield.gif') !important;
+    width: 160px;
+    height: 160px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+/* ========== SEARCH OVERLAY ========== */
+.THIS .Header__search {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    padding: 5rem 1.5rem !important;
+    background-color: #340e51 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    z-index: 1000 !important;
+    transition: visibility 0.3s ease, opacity 0.3s ease !important;
+}
+
+.THIS .Header__search.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.THIS .Header__search-close {
+    position: absolute !important;
+    top: 1.5rem !important;
+    right: 1.5rem !important;
+    width: 3rem !important;
+    height: 3rem !important;
+    border: none !important;
+    background: transparent !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+    z-index: 1001 !important;
+    padding: 0 !important;
+}
+
+.THIS .Header__search-close:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transform: rotate(90deg) !important;
+}
+
+.THIS .Header__search-close .close-x {
+    font-size: 2.5rem !important;
+    line-height: 1 !important;
+    font-weight: 300 !important;
+}
+
+@media (min-width: 769px) {
+    .THIS .Header__search {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .THIS .Header__search-close {
+        top: 2rem !important;
+        right: 2rem !important;
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+    }
+}
+
+.THIS .Header__search-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+}
+
+.THIS .Header__search .h3 {
+    color: #fff !important;
+    margin-bottom: 2rem !important;
+}
+
+.THIS .Header__form {
+    display: flex !important;
+    background: #fff !important;
+}
+
+.THIS .Header__label {
+    flex-grow: 1 !important;
+}
+
+.THIS .Header__input {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 1.5rem !important;
+    border: 0 !important;
+    background-color: transparent !important;
+    color: #000 !important;
+    font-size: 1.125rem !important;
+}
+
+.THIS .Header__submit {
+    display: grid !important;
+    place-items: center !important;
+    flex-shrink: 0 !important;
+    width: 4.5rem !important;
+    height: 4.5rem !important;
+    padding: 0.875rem !important;
+    border: 0 !important;
+    background: #fff !important;
+    cursor: pointer !important;
+}
+
+.THIS .Header__popular {
+    color: #fff !important;
+}
+
+.THIS .Header__popular-title {
+    margin-bottom: 1rem !important;
+    color: #fff !important;
+}
+
+.THIS .Button--pill {
+    background-color: #59007b !important;
+    border-radius: 10rem !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    margin-right: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.THIS .Button--pill:hover {
+    background-color: #982eb4 !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    /* Hide utility bar on mobile */
+    .THIS .Header__group {
+        display: none !important;
+    }
+
+    /* Show hamburger menu button on mobile */
+    .THIS .Header__menu-toggle {
+        display: flex !important;
+        order: 3 !important;
+    }
+
+    /* Adjust header layout for mobile */
+    .THIS .Header__main {
+        padding: 1rem !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .THIS .Header__search-toggle {
+        order: 1 !important;
+    }
+
+    .THIS .Header__logo {
+        order: 2 !important;
+        flex: 1 !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .THIS .main-content {
+        padding: 1rem 0.5rem;
+    }
+}

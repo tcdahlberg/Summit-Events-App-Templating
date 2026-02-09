@@ -1,0 +1,612 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="St. Thomas Alumni Experience Cloud Template">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!-- Attributes -->
+    <aura:attribute name="pageTitle" type="String" default="University of St. Thomas Alumni"/>
+    <aura:attribute name="contentWidth" type="String" default="Full"/>
+    <aura:attribute name="backgroundColor" type="String" default="#ffffff"/>
+    <aura:attribute name="menuOpen" type="Boolean" default="false"/>
+    <aura:attribute name="searchOpen" type="Boolean" default="false"/>
+    <aura:attribute name="searchQuery" type="String" default=""/>
+    <aura:attribute name="currentYear" type="String" default="2026"/>
+
+    <!-- Static Resources -->
+
+
+    <ltng:require
+            styles="{!join(',',
+            'https://s3.amazonaws.com/static.aws.stthomas.edu/gtm-consent/main.css',
+            'https://use.typekit.net/hcg6hzb.css',
+            $Resource.StThomasGeneral2025 + '/css/2025_stthomas_alumni_template.css',
+            $Resource.StThomasGeneral2025 + '/css/slds-alumni-brand.css'
+            )}"
+            scripts="{!join(',',
+            'https://s3.amazonaws.com/gemini-static-files.aws.stthomas.edu/assets/script3.js',
+            'https://s3.amazonaws.com/static.aws.stthomas.edu/gtm-consent/main.js'
+            )}"
+            afterScriptsLoaded="{!c.setup}"
+    />
+
+
+<!--    <ltng:require styles="{!$Resource.StThomasGeneral2025 + '/css/2025_stthomas_alumni_template.css'}"/>-->
+<!--    <ltng:require styles="{!$Resource.StThomasGeneral2025 + '/css/slds-alumni-brand.css'}"/>-->
+<!--    <ltng:require scripts="https://s3.amazonaws.com/gemini-static-files.aws.stthomas.edu/assets/script3.js"/>-->
+<!--    <ltng:require scripts="https://use.typekit.net/hcg6hzb.css"/>-->
+
+    <div class="st-thomas-alumni-wrapper">
+
+        <!-- ========== HEADER SECTION ========== -->
+        <!-- Skip Navigation -->
+        <nav aria-label="Skip navigation" class="tab-navigation" id="access">
+            <a class="skip-link" href="#main-content" tabindex="1">Skip to primary content</a>
+        </nav>
+
+        <!-- Main Header -->
+        <header class="HeaderLanding Gemini">
+            <div class="HeaderLanding__sentinel" data-stuck=""></div>
+            <div class="HeaderLanding__group-wrapper">
+                <div class="HeaderLanding__group">
+                    <!-- Logo Section -->
+                    <div class="HeaderLanding__logo-wrapper">
+                        <div class="h4 large-custom-only">
+                            <a href="https://alumni.stthomas.edu">Alumni</a>
+                        </div>
+                        <a class="HeaderLanding__logo" href="https://www.stthomas.edu/" id="top" target="_blank">
+                            <span class="screen-reader-text">University of St. Thomas</span>
+                            <!-- Logo -->
+                            <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/ust-logo.svg'}"
+                                 alt="University of St. Thomas"
+                                 class="HeaderLanding__logo-image"/>
+                        </a>
+                    </div>
+
+                    <!-- Audience Links -->
+                    <div class="HeaderLanding__audience-wrapper">
+                        <ul class="HeaderLanding__actions actions-top">
+                            <li>
+                                <a class="link-underline link-info"
+                                   href="https://alumni.stthomas.edu/update-contact-information/index.html"
+                                   target="_parent">
+                                    Update Contact Info
+                                </a>
+                            </li>
+                            <li>
+                                <a class="link-underline link-heart" href="https://give.stthomas.edu/index.html"
+                                   target="_parent">
+                                    Make a Gift
+                                </a>
+                            </li>
+                        </ul>
+
+                        <button aria-expanded="false" class="HeaderLanding__subnav-toggle info-for-toggle"
+                                data-expand-lock="">Info For
+                        </button>
+                        <ul class="HeaderLanding__audience">
+                            <li>
+                                <a class="link-underline"
+                                   href="https://alumni.stthomas.edu/early-career-alumni/index.html"
+                                   target="_parent">Early Career Alumni</a>
+                            </li>
+                            <li>
+                                <a class="link-underline" href="https://alumni.stthomas.edu/parents-families/index.html"
+                                   target="_parent">Parents &amp; Families</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <div class="HeaderLanding__main-wrapper">
+                <div class="HeaderLanding__main js-header" data-stuck="">
+                    <button aria-expanded="{!v.menuOpen}"
+                            class="HeaderLanding__menu-toggle"
+                            onclick="{!c.toggleMenu}"
+                            data-expand="popup"
+                            data-expand-toggle="menu-active">
+                        <span class="screen-reader-text">Toggle menu</span>
+                    </button>
+
+                    <!-- Navigation Menu -->
+                    <nav class="HeaderLanding__menu" id="main-navigation">
+                        <ul class="HeaderLanding__nav">
+                            <!-- About -->
+                            <li>
+                                <button aria-expanded="false" class="HeaderLanding__subnav-toggle link-underline"
+                                        data-expand-lock="">
+                                    About
+                                </button>
+                                <div class="HeaderLanding__subnav">
+                                    <div class="Header__all-children">
+                                        <div class="Header__first-child">
+                                            <a href="https://alumni.stthomas.edu/about/index.html" target="_parent">About
+                                                the Tommie Network</a>
+                                        </div>
+                                        <ul>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/about/awards/index.html"
+                                                   target="_parent">Alumni Awards</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://tommiesports.com/sports/2022/6/14/hall-of-fame"
+                                                   target="_parent">Athletics Hall of Fame</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/about/alumni-engagement-board/index.html"
+                                                   target="_parent">Engagement Board</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/about/surveys/index.html"
+                                                   target="_parent">Alumni Surveys</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/contact/index.html"
+                                                   target="_parent">Contact the Alumni Team</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Benefits & Resources -->
+                            <li>
+                                <button aria-expanded="false" class="HeaderLanding__subnav-toggle link-underline"
+                                        data-expand-lock="">
+                                    Benefits &amp; Resources
+                                </button>
+                                <div class="HeaderLanding__subnav">
+                                    <div class="Header__all-children">
+                                        <div class="Header__first-child">
+                                            <a href="https://alumni.stthomas.edu/benefits-resources/index.html"
+                                               target="_parent">Benefits &amp; Resources for Alumni</a>
+                                        </div>
+                                        <ul>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/benefits-resources/career/index.html"
+                                                   target="_parent">Career Resources</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/benefits-resources/continuing-education/index.html"
+                                                   target="_parent">Continuing Education</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/benefits-resources/faith-spirituality/index.html"
+                                                   target="_parent">Faith &amp; Spirituality</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/benefits-resources/financial/index.html"
+                                                   target="_parent">Financial Wellness</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://www.stthomas.edu/registrar/alumni-former-student-information/index.html"
+                                                   target="_parent">Request a Transcript</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Get Involved -->
+                            <li>
+                                <button aria-expanded="false" class="HeaderLanding__subnav-toggle link-underline"
+                                        data-expand-lock="">
+                                    Get Involved
+                                </button>
+                                <div class="HeaderLanding__subnav">
+                                    <div class="Header__all-children">
+                                        <div class="Header__first-child">
+                                            <a href="https://alumni.stthomas.edu/get-involved/index.html"
+                                               target="_parent">Ways to Get Involved</a>
+                                        </div>
+                                        <ul>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/get-involved/join-st-thomas-connect/index.html"
+                                                   target="_parent">Join St. Thomas Connect</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/get-involved/corporate-alumni-groups/index.html"
+                                                   target="_parent">Corporate Alumni Groups</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/get-involved/social-media/index.html"
+                                                   target="_parent">Social Media Directory</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- News & Events -->
+                            <li>
+                                <button aria-expanded="false" class="HeaderLanding__subnav-toggle link-underline"
+                                        data-expand-lock="">
+                                    News &amp; Events
+                                </button>
+                                <div class="HeaderLanding__subnav">
+                                    <div class="Header__all-children">
+                                        <div class="Header__first-child">
+                                            <a href="https://alumni.stthomas.edu/news/index.html" target="_parent">Alumni
+                                                News</a>
+                                        </div>
+                                        <ul>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/news/stories/index.html"
+                                                   target="_parent">Alumni Stories</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/news/newsletter/index.html"
+                                                   target="_parent">Alumni Newsletter</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://news.stthomas.edu/st-thomas-magazine/"
+                                                   target="_parent">St. Thomas Magazine</a></li>
+                                            <li><a class="link-underline" href="https://news.stthomas.edu"
+                                                   target="_parent">St. Thomas Newsroom</a></li>
+                                            <li><a class="link-underline" href="https://tommiesports.com/"
+                                                   target="_parent">Athletics News</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="Header__all-children">
+                                        <div class="Header__first-child">
+                                            <a href="https://alumni.stthomas.edu/events/index.html" target="_parent">Events
+                                                for Alumni</a>
+                                        </div>
+                                        <ul>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/events/calendar/index.html"
+                                                   target="_parent">Events Calendar</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/events/index.html#signature-events"
+                                                   target="_parent">Signature Events</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/events/finding-forward/index.html"
+                                                   target="_parent">Finding Forward</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/events/homecoming/index.html"
+                                                   target="_parent">Homecoming</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/events/athletics-fans/index.html"
+                                                   target="_parent">Athletics Fan Events</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Support St. Thomas -->
+                            <li>
+                                <button aria-expanded="false" class="HeaderLanding__subnav-toggle link-underline"
+                                        data-expand-lock="">
+                                    Support St. Thomas
+                                </button>
+                                <div class="HeaderLanding__subnav">
+                                    <div class="Header__all-children">
+                                        <div class="Header__first-child">
+                                            <a href="https://alumni.stthomas.edu/support-st-thomas/index.html"
+                                               target="_parent">Ways to Support St. Thomas</a>
+                                        </div>
+                                        <ul>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/support-st-thomas/refer-a-student/index.html"
+                                                   target="_parent">Refer a Student</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/support-st-thomas/mentor-a-student/index.html"
+                                                   target="_parent">Mentor a Student</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/support-st-thomas/hire-a-tommie/index.html"
+                                                   target="_parent">Hire a Tommie</a></li>
+                                            <li><a class="link-underline"
+                                                   href="https://alumni.stthomas.edu/support-st-thomas/volunteer/index.html"
+                                                   target="_parent">Volunteer with St. Thomas</a></li>
+                                            <li><a class="link-underline" href="https://give.stthomas.edu/index.html"
+                                                   target="_parent">Make a Gift</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Mobile Only Links -->
+                        <ul class="HeaderLanding__nav-extra small-custom-only">
+                            <li><a class="link-underline"
+                                   href="https://alumni.stthomas.edu/early-career-alumni/index.html" target="_parent">Early
+                                    Career Alumni</a></li>
+                            <li><a class="link-underline" href="https://alumni.stthomas.edu/parents-families/index.html"
+                                   target="_parent">Parents &amp; Families</a></li>
+                        </ul>
+
+                        <!-- Mobile Actions -->
+                        <ul class="HeaderLanding__actions">
+                            <li><a class="link-underline link-info"
+                                   href="https://alumni.stthomas.edu/update-contact-information/index.html"
+                                   target="_parent">Update Contact Info</a></li>
+                            <li><a class="link-underline link-heart" href="https://give.stthomas.edu/index.html"
+                                   target="_parent">Make a Gift</a></li>
+                        </ul>
+                    </nav>
+
+                    <button aria-expanded="{!v.searchOpen}"
+                            class="HeaderLanding__search-toggle"
+                            onclick="{!c.toggleSearch}"
+                            data-expand="popup"
+                            data-expand-toggle="search-active">
+                        <span class="screen-reader-text">Toggle search</span>
+                    </button>
+
+                    <!-- Search Overlay -->
+                    <div class="{!'HeaderLanding__search' + (v.searchOpen ? ' active' : '')}">
+                        <div class="HeaderLanding__search-container">
+                            <div class="h3">What can we help you find?</div>
+                            <form action="//search.stthomas.edu/search/" class="HeaderLanding__form" method="get">
+                                <label class="HeaderLanding__label">
+                                    <span class="screen-reader-text">Search</span>
+                                    <input aria-label="Search Input"
+                                           class="HeaderLanding__input"
+                                           name="q"
+                                           placeholder="Search..."
+                                           type="search"
+                                           value="{!v.searchQuery}"/>
+                                </label>
+                                <button class="HeaderLanding__submit" type="submit">
+                                    <span class="screen-reader-text">Submit</span>
+                                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/search-icon.svg'}"
+                                         alt="Search"
+                                         class="search-icon"/>
+                                </button>
+                            </form>
+                            <div class="HeaderLanding__popular">
+                                <div class="HeaderLanding__popular-title h5">Popular Search</div>
+                                <a class="Button Button--pill"
+                                   href="https://search.stthomas.edu/search/index.html?q=career+resources">career
+                                    resources</a>
+                                <a class="Button Button--pill"
+                                   href="https://search.stthomas.edu/search/index.html?q=events+calendar">events
+                                    calendar</a>
+                                <a class="Button Button--pill"
+                                   href="https://search.stthomas.edu/search/index.html?q=st.+thomas+connect">st. thomas
+                                    connect</a>
+                                <a class="Button Button--pill"
+                                   href="https://search.stthomas.edu/search/index.html?q=volunteer">volunteer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== MAIN CONTENT AREA ========== -->
+        <div id="main-content" role="main" class="main-content">
+            {!v.body}
+        </div>
+
+        <!-- ========== FOOTER SECTION ========== -->
+        <footer class="FooterLanding">
+            <!-- Contact Section -->
+            <div class="FooterLanding__contact">
+                <a class="FooterLanding__logo FooterLanding__logo--sm" href="https://alumni.stthomas.edu">
+                    <span class="screen-reader-text">University of St. Thomas</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/ust-logo.svg'}"
+                         alt="University of St. Thomas" style="color:white;"/>
+                </a>
+                <div class="FooterLanding__college">
+                    <p>University of St. Thomas, Minnesota<br/>
+                        2115 Summit Avenue<br/>
+                        St. Paul, Minnesota 55105 USA</p>
+                </div>
+                <p>
+                    <a class="Button" href="https://alumni.stthomas.edu/contact/index.html" target="_parent">
+                        Contact Alumni Engagement
+                    </a>
+                    <a class="Button" href="https://alumni.stthomas.edu/update-contact-information/index.html"
+                       target="_parent">
+                        Update your Contact Info
+                    </a>
+                    <a class="Button"
+                       href="https://www.stthomas.edu/registrar/alumni-former-student-information/index.html"
+                       target="_parent">
+                        Request a Transcript
+                    </a>
+                </p>
+
+                <!-- Social Media - Desktop -->
+                <div class="FooterLanding__social large-only">
+                    <a class="FooterLanding__icon" href="https://www.facebook.com/tommiealumni/"
+                       aria-label="Facebook" title="Facebook" target="_blank">
+                        <span class="screen-reader-text">Facebook</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/facebook-icon.svg'}"
+                             alt="Facebook"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://www.instagram.com/tommiealumni/"
+                       aria-label="Instagram" title="Instagram" target="_blank">
+                        <span class="screen-reader-text">Instagram</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/instagram-icon.svg'}"
+                             alt="Instagram"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://www.linkedin.com/school/universityofstthomas/"
+                       aria-label="LinkedIn" title="LinkedIn" target="_blank">
+                        <span class="screen-reader-text">LinkedIn</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/linkedin-icon.svg'}"
+                             alt="LinkedIn"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://www.tiktok.com/@universityofstthomas/"
+                       aria-label="TikTok" title="TikTok" target="_blank">
+                        <span class="screen-reader-text">TikTok</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/tiktok-icon.svg'}"
+                             alt="TikTok"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://twitter.com/tommiealumni/"
+                       aria-label="X (Twitter)" title="X" target="_blank">
+                        <span class="screen-reader-text">X</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/x-icon.svg'}"
+                             alt="X"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://www.youtube.com/universityofstthomas/"
+                       aria-label="YouTube" title="YouTube" target="_blank">
+                        <span class="screen-reader-text">YouTube</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/youtube-icon.svg'}"
+                             alt="YouTube"
+                             class="social-icon"/>
+                    </a>
+                </div>
+
+                <!-- Copyright - Desktop -->
+                <div class="FooterLanding__legal t-xs large-only">
+                    <p>&#169; {!v.currentYear} University of St. Thomas, Minnesota</p>
+                </div>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="FooterLanding__main">
+                <nav class="FooterLanding__nav-landing">
+                    <div class="FooterLanding__nav-block">
+                        <div>
+                            <div class="FooterLanding__nav-landing-heading h5">Benefits &amp; Resources</div>
+                            <ul>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/benefits-resources/career/index.html"
+                                       target="_parent">Career Resources</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/benefits-resources/continuing-education/index.html"
+                                       target="_parent">Continuing Education</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/benefits-resources/faith-spirituality/index.html"
+                                       target="_parent">Faith &amp; Spirituality</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/benefits-resources/financial/index.html"
+                                       target="_parent">Financial Wellness</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="FooterLanding__nav-landing-heading h4">Get Involved</div>
+                            <ul>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/get-involved/join-st-thomas-connect/index.html"
+                                       target="_parent">Join St. Thomas Connect</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/get-involved/corporate-alumni-groups/index.html"
+                                       target="_parent">Corporate Alumni Groups</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/get-involved/social-media/index.html"
+                                       target="_parent">Social Media Directory</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/about/alumni-engagement-board/index.html"
+                                       target="_parent">Alumni Engagement Board</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="FooterLanding__nav-block">
+                        <div>
+                            <div class="FooterLanding__nav-landing-heading h4">News &amp; Events</div>
+                            <ul>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/news/stories/index.html" target="_parent">Alumni
+                                        Stories</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/news/newsletter/index.html" target="_parent">Alumni
+                                        Newsletter</a></li>
+                                <li><a class="FooterLanding__link link-underline" href="https://news.stthomas.edu/"
+                                       target="_parent">St. Thomas News</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/events/index.html#signature-events"
+                                       target="_parent">Signature Events</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/events/calendar/index.html" target="_parent">Events
+                                        Calendar</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="FooterLanding__nav-landing-heading h4">Support St. Thomas</div>
+                            <ul>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/support-st-thomas/refer-a-student/index.html"
+                                       target="_parent">Refer a Student</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/support-st-thomas/mentor-a-student/index.html"
+                                       target="_parent">Mentor a Student</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/support-st-thomas/hire-a-tommie/index.html"
+                                       target="_parent">Hire a Tommie</a></li>
+                                <li><a class="FooterLanding__link link-underline"
+                                       href="https://alumni.stthomas.edu/support-st-thomas/volunteer/index.html"
+                                       target="_parent">Volunteer</a></li>
+                                <li><a class="FooterLanding__link link-underline" href="https://give.stthomas.edu/"
+                                       target="_parent">Make a Gift</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Footer Links -->
+                <div class="FooterLanding__links">
+                    <ul>
+                        <li><a class="link-underline"
+                               href="https://stthomas.az1.qualtrics.com/jfe/form/SV_29nqe0td5nH798q" target="_parent">Report
+                                a Website Problem</a></li>
+                        <li><a class="link-underline" href="https://www.stthomas.edu/policies/equal-opportunity/"
+                               target="_parent">EO Statement</a></li>
+                        <li><a class="link-underline" href="https://www.stthomas.edu/accessibility-statement/index.html"
+                               target="_parent">Accessibility</a></li>
+                        <li><a class="link-underline" href="https://www.stthomas.edu/policies/online-privacy/index.html"
+                               target="_parent">Privacy Policy</a></li>
+                        <li><a class="link-underline" href="https://www.stthomas.edu/emergency/index.html"
+                               target="_parent">Emergency</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="FooterLanding__social small-only">
+                    <a class="FooterLanding__icon" href="https://www.facebook.com/tommiealumni/"
+                       aria-label="Facebook" title="Facebook" target="_blank">
+                        <span class="screen-reader-text">Facebook</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/facebook-icon.svg'}"
+                             alt="Facebook"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://www.instagram.com/tommiealumni/"
+                       aria-label="Instagram" title="Instagram" target="_blank">
+                        <span class="screen-reader-text">Instagram</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/instagram-icon.svg'}"
+                             alt="Instagram"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://www.linkedin.com/school/universityofstthomas/"
+                       aria-label="LinkedIn" title="LinkedIn" target="_blank">
+                        <span class="screen-reader-text">LinkedIn</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/linkedin-icon.svg'}"
+                             alt="LinkedIn"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://www.tiktok.com/@universityofstthomas/"
+                       aria-label="TikTok" title="TikTok" target="_blank">
+                        <span class="screen-reader-text">TikTok</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/tiktok-icon.svg'}"
+                             alt="TikTok"
+                             class="social-icon"/>
+                    </a>
+
+                    <a class="FooterLanding__icon" href="https://twitter.com/tommiealumni/"
+                       aria-label="X (Twitter)" title="X" target="_blank">
+                        <span class="screen-reader-text">X</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/x-icon.svg'}"
+                             alt="X"
+                             class="social-icon"/>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="FooterLanding__legal t-xs small-only">
+                    <p>&#169; {!v.currentYear} University of St. Thomas, Minnesota</p>
+                </div>
+            </div>
+
+            <!-- Back to Top -->
+            <a class="Footer__back-to-top" href="#top">
+                Back to Top
+                <span class="back-to-top-icon">↑</span>
+            </a>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="slds-hide">
+        <div class="background"></div>
+    </div>
+</aura:component>

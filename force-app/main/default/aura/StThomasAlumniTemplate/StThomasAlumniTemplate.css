@@ -1,0 +1,79 @@
+.THIS .st-thomas-alumni-wrapper {
+    font-family: 'neue-haas-grotesk-display', sans-serif;
+}
+
+.THIS #loading .background {
+    background-image: url('/resource/StThomasGeneral2025/images/loading-shield.gif') !important;
+    width: 160px;
+    height: 160px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.THIS .slds-col img {
+    max-width: 99%;
+}
+
+/* Skip navigation link */
+.THIS .tab-navigation {
+    position: absolute;
+    top: -40px;
+}
+
+.THIS .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #510c76;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.THIS .skip-link:focus {
+    top: 0;
+}
+
+/* Screen reader text */
+.THIS .screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Social Media Icons */
+.THIS .social-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+
+/* Search Icon */
+.THIS .search-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+/* Logo Image */
+.THIS .HeaderLanding__logo-image {
+    width: 128px;
+    height: 28px;
+}
+
+
+/* Back to Top Icon */
+.THIS .back-to-top-icon {
+    font-size: 24px;
+    font-weight: bold;
+}

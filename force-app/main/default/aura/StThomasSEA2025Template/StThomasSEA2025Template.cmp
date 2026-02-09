@@ -1,0 +1,232 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="St. Thomas SEA 2025 Experience Cloud Template">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!-- Attributes -->
+    <aura:attribute name="pageTitle" type="String" default="University of St. Thomas"/>
+    <aura:attribute name="contentWidth" type="String" default="Full"/>
+    <aura:attribute name="backgroundColor" type="String" default="#ffffff"/>
+    <aura:attribute name="searchOpen" type="Boolean" default="false"/>
+    <aura:attribute name="searchQuery" type="String" default=""/>
+    <aura:attribute name="currentYear" type="String" default="2026"/>
+
+    <!-- Static Resources -->
+    <ltng:require
+            styles="{!join(',',
+            'https://use.typekit.net/hcg6hzb.css',
+            $Resource.StThomasGeneral2025 + '/css/minimal.css',
+            $Resource.StThomasGeneral2025 + '/css/slds-brand.css'
+            )}"
+            afterScriptsLoaded="{!c.scriptsLoaded}"
+    />
+
+    <div class="st-thomas-sea-wrapper">
+
+        <!-- ========== UTILITY BAR (Purple) ========== -->
+        <div class="Header__group">
+            <ul class="Header__audience">
+                <li>
+                    <a class="link-underline" href="https://stthomas.edu/current-students/index.html" target="_blank">Current Students</a>
+                </li>
+                <li>
+                    <a class="link-underline" href="https://stthomas.edu/current-families/index.html" target="_blank">Parents &amp; Families</a>
+                </li>
+                <li>
+                    <a class="link-underline" href="https://alumni.stthomas.edu/index.html" target="_blank">Alumni</a>
+                </li>
+            </ul>
+            <div class="Header__actions-wrapper">
+                <ul class="Header__actions">
+                    <li>
+                        <a class="link-underline link-heart" href="https://give.stthomas.edu/index.html" target="_blank">Give</a>
+                    </li>
+                    <li>
+                        <a class="link-underline link-news" href="https://news.stthomas.edu/" target="_blank">News</a>
+                    </li>
+                    <li>
+                        <a class="link-underline link-info" href="https://one.stthomas.edu/" target="_blank">OneStThomas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ========== HEADER SECTION ========== -->
+        <header class="Header Gemini">
+            <div class="Header__sentinel" data-stuck=""></div>
+            <div class="Header__main js-header" data-stuck="">
+                <a class="Header__logo" href="/">
+                    <span class="screen-reader-text">University of St. Thomas</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/ust-logo-purple.svg'}"
+                         alt="University of St. Thomas"/>
+                </a>
+
+
+                <button aria-expanded="{!v.searchOpen}"
+                        class="Header__search-toggle"
+                        onclick="{!c.toggleSearch}"
+                        data-expand="popup"
+                        data-expand-toggle="search-active">
+                    <span class="screen-reader-text">Toggle search</span>
+                </button>
+
+                <!-- Search Overlay -->
+                <div class="{!'Header__search' + (v.searchOpen ? ' active' : '')}">
+                    <div class="Header__search-container">
+                        <div class="h3">What can we help you find?</div>
+                        <form action="//search.stthomas.edu/search/" class="Header__form" method="get">
+                            <label class="Header__label">
+                                <span class="screen-reader-text">Search</span>
+                                <input aria-label="Search Input"
+                                       class="Header__input"
+                                       name="q"
+                                       placeholder="Search..."
+                                       type="search"
+                                       value="{!v.searchQuery}"/>
+                            </label>
+                            <button class="Header__submit" type="submit">
+                                <span class="screen-reader-text">Submit</span>
+                                <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/search-icon.svg'}"
+                                     alt="Search"
+                                     class="search-icon"/>
+                            </button>
+                        </form>
+                        <div class="Header__popular">
+                            <div class="Header__popular-title h5">Popular Search</div>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=registrar">registrar</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=financial+aid">financial aid</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=canvas">canvas</a>
+                            <a class="Button Button--pill" href="https://search.stthomas.edu/search/index.html?q=programs">programs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== MAIN CONTENT AREA ========== -->
+        <div id="main-content" role="main" class="main-content">
+            {!v.body}
+        </div>
+
+        <!-- ========== FOOTER SECTION ========== -->
+        <footer class="Footer">
+            <!-- Contact Section -->
+            <div class="Footer__contact">
+                <a class="Footer__logo" href="https://www.stthomas.edu" target="_blank">
+                    <span class="screen-reader-text">University of St. Thomas</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/ust-logo.svg'}"
+                         alt="University of St. Thomas"/>
+                </a>
+                <p>University of St. Thomas<br/>
+                    2115 Summit Avenue<br/>
+                    St. Paul, Minnesota 55105 USA<br/>
+                    <a href="tel:+1-651-962-5000">651-962-5000</a>
+                </p>
+                <p class="Footer__social large-only">
+                    <a class="Footer__icon" href="https://www.facebook.com/UofStThomasMN/" aria-label="Facebook" title="Facebook" target="_blank">
+                        <span class="screen-reader-text">Facebook</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/facebook-icon.svg'}" alt="Facebook" class="social-icon"/>
+                    </a>
+                    <a class="Footer__icon" href="https://www.instagram.com/uofstthomasmn/" aria-label="Instagram" title="Instagram" target="_blank">
+                        <span class="screen-reader-text">Instagram</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/instagram-icon.svg'}" alt="Instagram" class="social-icon"/>
+                    </a>
+                    <a class="Footer__icon" href="https://www.linkedin.com/school/universityofstthomas/" aria-label="LinkedIn" title="LinkedIn" target="_blank">
+                        <span class="screen-reader-text">LinkedIn</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/linkedin-icon.svg'}" alt="LinkedIn" class="social-icon"/>
+                    </a>
+                    <a class="Footer__icon" href="https://www.tiktok.com/@universityofstthomas/" aria-label="TikTok" title="TikTok" target="_blank">
+                        <span class="screen-reader-text">TikTok</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/tiktok-icon.svg'}" alt="TikTok" class="social-icon"/>
+                    </a>
+                    <a class="Footer__icon" href="https://x.com/UofStThomasMN/" aria-label="X (Twitter)" title="X" target="_blank">
+                        <span class="screen-reader-text">X</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/x-icon.svg'}" alt="X" class="social-icon"/>
+                    </a>
+                    <a class="Footer__icon" href="https://www.youtube.com/universityofstthomas/" aria-label="YouTube" title="YouTube" target="_blank">
+                        <span class="screen-reader-text">YouTube</span>
+                        <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/youtube-icon.svg'}" alt="YouTube" class="social-icon"/>
+                    </a>
+                </p>
+                <div class="Footer__legal t-xs zero large-only">
+                    <p>&#169; {!v.currentYear} University of St. Thomas, Minnesota</p>
+                </div>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="Footer__main">
+                <div class="Footer__nav-block">
+                    <nav class="Footer__nav">
+                        <ul>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/maps-directions/" target="_blank">Maps &amp; Directions</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/parking-transportation/" target="_blank">Parking &amp; Transportation</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/student-life/disability-resources/" target="_blank">Disability Resources</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/public-safety/" target="_blank">Public Safety</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/event-services/" target="_blank">Conference &amp; Event Services</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/media-relations/" target="_blank">Media Relations</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/jobs/" target="_blank">Jobs at St. Thomas</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/technology-resources/" target="_blank">Technology Resources (IT Help)</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/academics/accreditation/" target="_blank">Accreditation &amp; Assessment</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/policies/" target="_blank">Policies &amp; Compliance</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/title-ix/" target="_blank">Title IX</a></li>
+                            <li><a class="Footer__link link-underline" href="https://www.stthomas.edu/registrar/" target="_blank">Registrar</a></li>
+                            <li><a class="Footer__link link-underline" href="https://directory.aws.stthomas.edu/" target="_blank">Directory</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="Footer__links">
+                    <ul>
+                        <li><a class="link-underline" href="https://stthomas.az1.qualtrics.com/jfe/form/SV_29nqe0td5nH798q" target="_blank">Report a Website Problem</a></li>
+                        <li><a class="link-underline" href="https://www.stthomas.edu/policies/equal-opportunity/" target="_blank">EO Statement</a></li>
+                        <li><a class="link-underline" href="https://www.stthomas.edu/accessibility-statement/" target="_blank">Accessibility</a></li>
+                        <li><a class="link-underline" href="https://www.stthomas.edu/policies/online-privacy/" target="_blank">Privacy Policy</a></li>
+                        <li><a class="link-underline" href="https://www.stthomas.edu/emergency/" target="_blank">Emergency</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media - Mobile -->
+            <div class="Footer__social small-only">
+                <a class="Footer__icon" href="https://www.facebook.com/UofStThomasMN/" aria-label="Facebook" title="Facebook" target="_blank">
+                    <span class="screen-reader-text">Facebook</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/facebook-icon.svg'}" alt="Facebook" class="social-icon"/>
+                </a>
+                <a class="Footer__icon" href="https://www.instagram.com/uofstthomasmn/" aria-label="Instagram" title="Instagram" target="_blank">
+                    <span class="screen-reader-text">Instagram</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/instagram-icon.svg'}" alt="Instagram" class="social-icon"/>
+                </a>
+                <a class="Footer__icon" href="https://www.linkedin.com/school/universityofstthomas/" aria-label="LinkedIn" title="LinkedIn" target="_blank">
+                    <span class="screen-reader-text">LinkedIn</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/linkedin-icon.svg'}" alt="LinkedIn" class="social-icon"/>
+                </a>
+                <a class="Footer__icon" href="https://www.tiktok.com/@universityofstthomas/" aria-label="TikTok" title="TikTok" target="_blank">
+                    <span class="screen-reader-text">TikTok</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/tiktok-icon.svg'}" alt="TikTok" class="social-icon"/>
+                </a>
+                <a class="Footer__icon" href="https://x.com/UofStThomasMN/" aria-label="X (Twitter)" title="X" target="_blank">
+                    <span class="screen-reader-text">X</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/x-icon.svg'}" alt="X" class="social-icon"/>
+                </a>
+                <a class="Footer__icon" href="https://www.youtube.com/universityofstthomas/" aria-label="YouTube" title="YouTube" target="_blank">
+                    <span class="screen-reader-text">YouTube</span>
+                    <img src="{!$Resource.StThomasGeneral2025 + '/images/svg/youtube-icon.svg'}" alt="YouTube" class="social-icon"/>
+                </a>
+            </div>
+
+            <!-- Copyright - Mobile -->
+            <div class="Footer__legal t-xs zero small-only">
+                <p>&#169; {!v.currentYear} University of St. Thomas, Minnesota</p>
+            </div>
+
+            <!-- Back to Top -->
+            <a class="Footer__back-to-top" href="#top">
+                Back to Top
+                <span class="back-to-top-icon">↑</span>
+            </a>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="slds-hide">
+        <div class="background"></div>
+    </div>
+</aura:component>

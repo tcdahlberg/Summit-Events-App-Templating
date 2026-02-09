@@ -1,0 +1,4 @@
+<design:component label="St. Thomas Alumni Template">
+    <design:attribute name="contentWidth" label="Content Width" datasource="Full,Narrow" default="Full" description="Width of the main content area" />
+    <design:attribute name="backgroundColor" label="Background Color" default="#ffffff" description="Page background color" />
+</design:component>
